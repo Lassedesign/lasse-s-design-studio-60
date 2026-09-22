@@ -15,8 +15,11 @@ import {
   Layers,
   ChevronDown,
   ArrowDown,
+  Menu,
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -141,8 +144,11 @@ function InstagramButton({ className }: { className?: string }) {
 /* --------------------------------- Header --------------------------------- */
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-lg">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/55 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a
           href="#top"
@@ -150,21 +156,55 @@ function Header() {
         >
           Lasse<span className="text-primary">.</span>Design
         </a>
-        <div className="flex items-center gap-3">
-          <a
-            href="#portfolio"
-            className="hidden rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:inline-flex"
-          >
-            Portfolio
-          </a>
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Hauptnavigation">
+          {[
+            ["Konzepte", "#portfolio"],
+            ["Angebote", "#leistungen"],
+            ["Über mich", "#ueber-mich"],
+            ["FAQ", "#faq"],
+          ].map(([label, href]) => (
+            <a key={href} href={href} className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground">
+              {label}
+            </a>
+          ))}
           <a
             href="#kontakt"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-deep"
+            className="ml-2 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
           >
             <Instagram className="size-4" aria-hidden />
             Kontakt
           </a>
-        </div>
+        </nav>
+        <Button
+          type="button"
+          variant="ghost"
+          size="icon"
+          onClick={() => setMenuOpen((current) => !current)}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
+          aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
+          className="text-foreground hover:bg-accent md:hidden"
+        >
+          {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+        </Button>
+      </div>
+      <div id="mobile-navigation" className={cn("border-t border-border bg-background/80 px-5 backdrop-blur-xl md:hidden", menuOpen ? "block animate-fade-in" : "hidden")}>
+        <nav className="mx-auto flex max-w-6xl flex-col gap-1 py-4" aria-label="Mobile Navigation">
+          {[
+            ["Konzepte", "#portfolio"],
+            ["Angebote", "#leistungen"],
+            ["Über mich", "#ueber-mich"],
+            ["FAQ", "#faq"],
+          ].map(([label, href]) => (
+            <a key={href} href={href} onClick={closeMenu} className="rounded-md px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent">
+              {label}
+            </a>
+          ))}
+          <a href="#kontakt" onClick={closeMenu} className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground">
+            <Instagram className="size-4" aria-hidden />
+            Kontakt
+          </a>
+        </nav>
       </div>
     </header>
   );
@@ -174,12 +214,10 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-16">
-      {/* Decorative background */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-32 left-1/2 h-[28rem] w-[42rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute right-[-8rem] top-40 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute left-[-6rem] top-72 h-64 w-64 rounded-full bg-accent blur-3xl" />
+    <section id="top" className="relative min-h-[92vh] overflow-hidden pt-16">
+      <div className="pointer-events-none absolute inset-0 -z-10 light-grid">
+        <div className="animate-drift-light absolute -left-40 top-10 h-28 w-[46rem] rotate-[-12deg] bg-primary/25 blur-3xl" />
+        <div className="animate-drift-light absolute -right-64 top-64 h-36 w-[54rem] rotate-[-18deg] bg-primary-deep/30 blur-3xl [animation-delay:-5s]" />
       </div>
 
       <div className="mx-auto flex max-w-4xl flex-col items-center px-5 pb-24 pt-24 text-center sm:px-8 sm:pb-28 sm:pt-32">
@@ -194,7 +232,7 @@ function Hero() {
           <h1 className="mt-8 font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl">
             Grafikdesign
             <br />
-            <span className="bg-gradient-to-r from-primary to-primary-deep bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-foreground to-primary bg-clip-text text-transparent">
               aus Leidenschaft.
             </span>
           </h1>
@@ -217,7 +255,7 @@ function Hero() {
         <Reveal delay={400}>
           <a
             href="#portfolio"
-            className="group mt-10 inline-flex items-center gap-2.5 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-deep"
+            className="group mt-10 inline-flex items-center gap-2.5 rounded-md bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
           >
             Portfolio ansehen
             <ArrowDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" aria-hidden />
@@ -255,7 +293,7 @@ function Portfolio() {
               <div
                 className={cn(
                   grad,
-                  "group relative aspect-[4/5] overflow-hidden rounded-3xl shadow-card transition-all duration-500 hover:-translate-y-1.5 hover:shadow-soft"
+                  "group relative aspect-[4/5] overflow-hidden rounded-xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1.5 hover:shadow-soft"
                 )}
               >
                 <div className="absolute inset-4 rounded-2xl border-2 border-dashed border-foreground/15 transition-colors duration-500 group-hover:border-foreground/25" />
@@ -305,7 +343,7 @@ const SERVICES = [
 
 function Leistungen() {
   return (
-    <section id="leistungen" className="scroll-mt-20 bg-secondary/60 py-20 sm:py-28">
+    <section id="leistungen" className="scroll-mt-20 bg-secondary/25 py-20 backdrop-blur-sm sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Leistungen"
@@ -316,7 +354,7 @@ function Leistungen() {
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((service, i) => (
             <Reveal key={service.title} delay={i * 100}>
-              <div className="group flex h-full flex-col rounded-3xl border border-border bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft">
+              <div className="glass-panel group flex h-full flex-col rounded-xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft">
                 <div className="inline-flex size-12 items-center justify-center rounded-2xl bg-accent text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                   <service.icon className="size-5.5" strokeWidth={1.8} aria-hidden />
                 </div>
@@ -431,7 +469,7 @@ const BENEFITS = [
 
 function Warum() {
   return (
-    <section id="warum" className="scroll-mt-20 bg-secondary/60 py-20 sm:py-28">
+    <section id="warum" className="scroll-mt-20 bg-secondary/25 py-20 backdrop-blur-sm sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Vorteile"
@@ -450,7 +488,7 @@ function Warum() {
                 i === 4 && "md:col-span-3"
               )}
             >
-              <div className="group flex h-full items-start gap-5 rounded-3xl border border-border bg-card p-7 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft">
+              <div className="glass-panel group flex h-full items-start gap-5 rounded-xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft">
                 <div className="inline-flex size-12 shrink-0 items-center justify-center rounded-2xl bg-accent text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                   <benefit.icon className="size-5.5" strokeWidth={1.8} aria-hidden />
                 </div>
@@ -550,7 +588,7 @@ function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-20 bg-secondary/60 py-20 sm:py-28">
+    <section id="faq" className="scroll-mt-20 bg-secondary/25 py-20 backdrop-blur-sm sm:py-28">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="FAQ"
@@ -565,7 +603,7 @@ function Faq() {
               <Reveal key={faq.question} delay={i * 60}>
                 <div
                   className={cn(
-                    "overflow-hidden rounded-2xl border bg-card transition-colors duration-300",
+                    "glass-panel overflow-hidden rounded-xl transition-colors duration-300",
                     isOpen ? "border-primary/30 shadow-card" : "border-border"
                   )}
                 >
@@ -615,7 +653,7 @@ function Kontakt() {
     <section id="kontakt" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
-          <div className="relative overflow-hidden rounded-4xl bg-gradient-to-br from-primary to-primary-deep px-6 py-16 text-center shadow-soft sm:px-16 sm:py-20">
+          <div className="glass-panel relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-deep/70 to-primary/25 px-6 py-16 text-center shadow-soft sm:px-16 sm:py-20">
             <div className="pointer-events-none absolute inset-0" aria-hidden>
               <div className="absolute -left-20 -top-20 size-64 rounded-full bg-primary-foreground/10 blur-3xl" />
               <div className="absolute -bottom-24 -right-16 size-72 rounded-full bg-primary-foreground/10 blur-3xl" />
@@ -684,7 +722,7 @@ function Footer() {
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground">
+    <div className="min-h-screen font-sans text-foreground">
       <Header />
       <main>
         <Hero />
