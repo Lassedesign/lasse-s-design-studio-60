@@ -216,7 +216,7 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="relative min-h-[92vh] overflow-hidden pt-16">
-      <div className="pointer-events-none absolute inset-0 -z-10 light-grid">
+      <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="animate-drift-light absolute -left-40 top-10 h-28 w-[46rem] rotate-[-12deg] bg-primary/25 blur-3xl" />
         <div className="animate-drift-light absolute -right-64 top-64 h-36 w-[54rem] rotate-[-18deg] bg-primary-deep/30 blur-3xl [animation-delay:-5s]" />
       </div>

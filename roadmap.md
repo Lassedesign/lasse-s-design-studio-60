@@ -1,0 +1,2 @@
+- Karo-Muster (light-grid) entfernen
+- Slogan-Verlauf nach Vorlagenbild anpassen, Start Hellblau
