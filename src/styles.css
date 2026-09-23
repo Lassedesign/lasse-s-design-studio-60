@@ -167,14 +167,6 @@
   backdrop-filter: blur(18px) saturate(135%);
 }
 
-@utility light-grid {
-  background-image:
-    linear-gradient(oklch(0.96 0.03 240 / 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(0.96 0.03 240 / 0.055) 1px, transparent 1px);
-  background-size: 54px 54px;
-  mask-image: linear-gradient(to bottom, black, transparent 86%);
-}
-
 @keyframes drift-light {
   0%, 100% { transform: translate3d(0, 0, 0) rotate(-12deg); opacity: 0.45; }
   50% { transform: translate3d(4rem, 2rem, 0) rotate(-8deg); opacity: 0.7; }
