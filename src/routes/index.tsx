@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import backgroundAsset from "@/assets/lasse-blue-background.jpeg.asset.json";
+import lasseLogo from "@/assets/lasse-logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -152,9 +154,10 @@ function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a
           href="#top"
-          className="font-display text-lg font-bold tracking-tight text-foreground"
+          className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-foreground"
         >
-          Lasse<span className="text-primary">.</span>Design
+          <img src={lasseLogo} alt="" className="size-9 object-contain" />
+          <span>Lasse<span className="text-primary">.</span>Design</span>
         </a>
         <nav className="hidden items-center gap-1 md:flex" aria-label="Hauptnavigation">
           {[
@@ -221,6 +224,13 @@ function Hero() {
       </div>
 
       <div className="mx-auto flex max-w-4xl flex-col items-center px-5 pb-24 pt-24 text-center sm:px-8 sm:pb-28 sm:pt-32">
+        <Reveal>
+          <img
+            src={lasseLogo}
+            alt="Lasse.Design Logo"
+            className="mb-6 size-28 object-contain drop-shadow-[0_16px_30px_var(--logo-shadow)] sm:size-32"
+          />
+        </Reveal>
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground">
             <Sparkles className="size-3.5" aria-hidden />
@@ -694,9 +704,10 @@ function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 px-5 text-center sm:px-8">
         <a
           href="#top"
-          className="font-display text-lg font-bold tracking-tight text-foreground"
+          className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-foreground"
         >
-          Lasse<span className="text-primary">.</span>Design
+          <img src={lasseLogo} alt="" className="size-10 object-contain" />
+          <span>Lasse<span className="text-primary">.</span>Design</span>
         </a>
         <p className="font-display text-sm font-medium tracking-wide text-muted-foreground">
           Auffällig. Einfach. Wirksam. Designs von morgen.
@@ -722,7 +733,15 @@ function Footer() {
 
 function Index() {
   return (
-    <div className="min-h-screen font-sans text-foreground">
+    <div className="relative min-h-screen overflow-hidden font-sans text-foreground">
+      <div className="pointer-events-none fixed inset-0 -z-20 bg-background" aria-hidden>
+        <img
+          src={backgroundAsset.url}
+          alt=""
+          className="h-full w-full object-cover opacity-90 saturate-125"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/35 to-background/75" />
+      </div>
       <Header />
       <main>
         <Hero />
