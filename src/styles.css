@@ -103,6 +103,7 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --logo-shadow: oklch(0.05 0.08 255 / 0.55);
 }
 
 .dark {
@@ -151,11 +152,7 @@
   }
 
   body {
-    background:
-      radial-gradient(circle at 86% 8%, oklch(0.62 0.23 275 / 0.8), transparent 27rem),
-      radial-gradient(circle at 12% 34%, oklch(0.56 0.2 245 / 0.65), transparent 33rem),
-      radial-gradient(circle at 80% 70%, oklch(0.5 0.2 255 / 0.55), transparent 38rem),
-      linear-gradient(145deg, oklch(0.13 0.09 275), oklch(0.28 0.19 261) 48%, oklch(0.16 0.13 252));
+    background: var(--color-background);
     background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
