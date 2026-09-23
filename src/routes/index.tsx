@@ -21,7 +21,6 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import backgroundAsset from "@/assets/lasse-blue-background.jpeg.asset.json";
-import lasseLogo from "@/assets/lasse-logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -156,7 +155,6 @@ function Header() {
           href="#top"
           className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-foreground"
         >
-          <img src={lasseLogo} alt="" className="size-9 object-contain" />
           <span>Lasse<span className="text-primary">.</span>Design</span>
         </a>
         <nav className="hidden items-center gap-1 md:flex" aria-label="Hauptnavigation">
@@ -218,31 +216,17 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="relative min-h-[92vh] overflow-hidden pt-16">
-      <div className="pointer-events-none absolute inset-0 -z-10 light-grid">
+      <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="animate-drift-light absolute -left-40 top-10 h-28 w-[46rem] rotate-[-12deg] bg-primary/25 blur-3xl" />
         <div className="animate-drift-light absolute -right-64 top-64 h-36 w-[54rem] rotate-[-18deg] bg-primary-deep/30 blur-3xl [animation-delay:-5s]" />
       </div>
 
       <div className="mx-auto flex max-w-4xl flex-col items-center px-5 pb-24 pt-24 text-center sm:px-8 sm:pb-28 sm:pt-32">
         <Reveal>
-          <img
-            src={lasseLogo}
-            alt="Lasse.Design Logo"
-            className="mb-6 size-28 object-contain drop-shadow-[0_16px_30px_var(--logo-shadow)] sm:size-32"
-          />
-        </Reveal>
-        <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground">
-            <Sparkles className="size-3.5" aria-hidden />
-            Hobbyprojekt
-          </span>
-        </Reveal>
-
-        <Reveal delay={100}>
-          <h1 className="mt-8 font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+          <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl">
             Grafikdesign
             <br />
-            <span className="bg-gradient-to-r from-primary via-foreground to-primary bg-clip-text text-transparent">
+            <span className="slogan-gradient">
               aus Leidenschaft.
             </span>
           </h1>
@@ -706,7 +690,6 @@ function Footer() {
           href="#top"
           className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-foreground"
         >
-          <img src={lasseLogo} alt="" className="size-10 object-contain" />
           <span>Lasse<span className="text-primary">.</span>Design</span>
         </a>
         <p className="font-display text-sm font-medium tracking-wide text-muted-foreground">

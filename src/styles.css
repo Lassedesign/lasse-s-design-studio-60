@@ -167,14 +167,6 @@
   backdrop-filter: blur(18px) saturate(135%);
 }
 
-@utility light-grid {
-  background-image:
-    linear-gradient(oklch(0.96 0.03 240 / 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(0.96 0.03 240 / 0.055) 1px, transparent 1px);
-  background-size: 54px 54px;
-  mask-image: linear-gradient(to bottom, black, transparent 86%);
-}
-
 @keyframes drift-light {
   0%, 100% { transform: translate3d(0, 0, 0) rotate(-12deg); opacity: 0.45; }
   50% { transform: translate3d(4rem, 2rem, 0) rotate(-8deg); opacity: 0.7; }
@@ -182,6 +174,23 @@
 
 @utility animate-drift-light {
   animation: drift-light 12s ease-in-out infinite;
+}
+
+/* Hero slogan — lebendiger Blau- zu Violett-Verlauf mit sanftem Glow */
+@utility slogan-gradient {
+  /* Hellblau → Blau → Dunkelblau/Navy → Magenta-Rosa, wie im Vorlagenbild */
+  background-image: linear-gradient(
+    92deg,
+    oklch(0.88 0.09 225) 0%,
+    oklch(0.76 0.15 235) 26%,
+    oklch(0.58 0.16 250) 52%,
+    oklch(0.44 0.15 262) 74%,
+    oklch(0.64 0.24 12) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 4px 22px oklch(0.7 0.16 262 / 0.45));
 }
 
 /* Portfolio placeholder tile gradients — token-based blue tones */
