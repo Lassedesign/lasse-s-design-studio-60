@@ -176,13 +176,12 @@
   animation: drift-light 12s ease-in-out infinite;
 }
 
-/* Hero slogan — sanfter Verlauf von Hellblau nach Rotlila mit wenig Farben */
+/* Hero slogan — sanfter Verlauf mit nur zwei Farben */
 @utility slogan-gradient {
-  /* Wenige Farben: Hellblau → Blau-Violett → Rotlila (eher rötlich) */
+  /* Nur zwei Farben: Hellblau → Rotlila */
   background-image: linear-gradient(
     92deg,
     oklch(0.88 0.09 225) 0%,
-    oklch(0.7 0.17 262) 45%,
     oklch(0.63 0.21 342) 100%
   );
   background-clip: text;
