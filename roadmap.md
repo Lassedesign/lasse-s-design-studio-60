@@ -1,3 +1,3 @@
 - Karo-Muster (light-grid) entfernen: erledigt
 - Slogan-Verlauf nach Vorlagenbild anpassen, Start Hellblau: erledigt
-- Slogan-Verlauf mit weniger Farben
+- Slogan-Verlauf mit weniger Farben: erledigt
