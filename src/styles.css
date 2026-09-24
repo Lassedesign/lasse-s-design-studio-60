@@ -178,16 +178,16 @@
 
 /* Hero slogan — sanfter Verlauf mit nur zwei Farben */
 @utility slogan-gradient {
-  /* Exakter Farbverlauf aus dem Anhang: Petrolblau → gedecktes Rotlila (Hues 243° → 342°) */
+  /* Exakter Farbverlauf aus dem Anhang, intensiver: Petrolblau → Rotlila (Hues 243° → 342°) */
   background-image: linear-gradient(
     92deg,
-    oklch(0.72 0.1 243) 0%,
-    oklch(0.58 0.1 342) 100%
+    oklch(0.72 0.16 243) 0%,
+    oklch(0.58 0.17 342) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 4px 22px oklch(0.5 0.1 342 / 0.4));
+  filter: drop-shadow(0 4px 22px oklch(0.5 0.16 342 / 0.5));
 }
 
 /* Portfolio placeholder tile gradients — token-based blue tones */
