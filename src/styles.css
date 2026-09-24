@@ -178,17 +178,17 @@
 
 /* Hero slogan — sanfter Verlauf von Hellblau nach Rotlila mit wenig Farben */
 @utility slogan-gradient {
-  /* Wenige Farben: Hellblau → Blau-Violett → Rotlila */
+  /* Wenige Farben: Hellblau → Blau-Violett → Rotlila (eher rötlich) */
   background-image: linear-gradient(
     92deg,
     oklch(0.88 0.09 225) 0%,
     oklch(0.7 0.17 262) 45%,
-    oklch(0.63 0.21 315) 100%
+    oklch(0.63 0.21 342) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 4px 22px oklch(0.68 0.19 300 / 0.45));
+  filter: drop-shadow(0 4px 22px oklch(0.66 0.19 340 / 0.45));
 }
 
 /* Portfolio placeholder tile gradients — token-based blue tones */
