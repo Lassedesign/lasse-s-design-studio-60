@@ -178,14 +178,12 @@
 
 /* Hero slogan — lebendiger Blau- zu Violett-Verlauf mit sanftem Glow */
 @utility slogan-gradient {
-  /* Hellblau → Blau → Dunkelblau/Navy → Magenta-Rosa, wie im Vorlagenbild */
+  /* Wenige Farben: Hellblau → kräftiges Blau → Violett-Blau */
   background-image: linear-gradient(
     92deg,
     oklch(0.88 0.09 225) 0%,
-    oklch(0.76 0.15 235) 26%,
-    oklch(0.58 0.16 250) 52%,
-    oklch(0.44 0.15 262) 74%,
-    oklch(0.64 0.24 12) 100%
+    oklch(0.7 0.16 245) 55%,
+    oklch(0.62 0.19 280) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
