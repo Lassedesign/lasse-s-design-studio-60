@@ -10,6 +10,9 @@ import {
   ArrowDown,
   ArrowRight,
 } from "lucide-react";
+import carportPoster from "@/assets/poster-carport-madej.png.asset.json";
+import dbPoster from "@/assets/poster-db.png.asset.json";
+import diorPoster from "@/assets/poster-dior.png.asset.json";
 import { ConceptSliders } from "@/components/concept-sliders";
 import {
   BackgroundAsset,
@@ -19,6 +22,12 @@ import {
   Reveal,
   SectionHeading,
 } from "@/components/site-chrome";
+
+const HOME_POSTERS = [
+  { src: carportPoster.url, alt: "Sommeraktion Stahl Carports – KI-Redesign" },
+  { src: dbPoster.url, alt: "DB – Wir suchen Sicherheitskräfte" },
+  { src: diorPoster.url, alt: "Dior Sauvage Parfum" },
+];
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -109,6 +118,19 @@ function Portfolio() {
         />
 
         <ConceptSliders />
+
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-6">
+          {HOME_POSTERS.map((poster, i) => (
+            <Reveal key={poster.src} delay={i * 100}>
+              <img
+                src={poster.src}
+                alt={poster.alt}
+                loading="lazy"
+                className="w-full rounded-[16px] border border-border shadow-lg shadow-black/30 transition-transform duration-300 hover:-translate-y-1.5"
+              />
+            </Reveal>
+          ))}
+        </div>
 
         <Reveal delay={150} className="mt-12 flex justify-center">
           <Link
