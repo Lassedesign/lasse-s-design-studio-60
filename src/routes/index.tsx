@@ -557,7 +557,7 @@ function Index() {
         <Faq />
         <Kontakt />
       </main>
-      <Footer />
+      <Footer home />
     </div>
   );
 }
