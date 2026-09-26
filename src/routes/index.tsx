@@ -340,12 +340,12 @@ const FAQS = [
   {
     question: "Was kostet ein Design?",
     answer:
-      "Plakate und Poster kosten 25 € pro Design. Für weitere Designs erstelle ich dir gerne ein individuelles Angebot – schreib mir dazu einfach auf Instagram.",
+      "Plakate und Poster kosten 25 € pro Design. Für weitere Designs erstelle ich dir gerne ein individuelles Angebot – schreib mir dazu einfach per E-Mail.",
   },
   {
     question: "Wie lange dauert die Gestaltung?",
     answer:
-      "Das hängt vom Umfang deines Projekts ab. Melde dich einfach mit deiner Idee auf Instagram und ich sage dir, wie schnell ich sie umsetzen kann.",
+      "Das hängt vom Umfang deines Projekts ab. Melde dich einfach mit deiner Idee per E-Mail und ich sage dir, wie schnell ich sie umsetzen kann.",
   },
   {
     question: "Kann ich eigene Bilder oder Logos einbringen?",
@@ -360,7 +360,7 @@ const FAQS = [
   {
     question: "In welchen Formaten bekomme ich mein Design?",
     answer:
-      "Dein Design bekommst du in den Formaten, die du brauchst – sprich mich auf Instagram einfach darauf an.",
+      "Dein Design bekommst du in den Formaten, die du brauchst – sprich mich per E-Mail einfach darauf an.",
   },
   {
     question: "Kannst du auch andere Designs erstellen?",
@@ -383,7 +383,7 @@ function Faq() {
         <SectionHeading
           eyebrow="FAQ"
           title="Häufige Fragen"
-          text="Alles Wichtige auf einen Blick – falls deine Frage fehlt, schreib mir einfach auf Instagram."
+          text="Alles Wichtige auf einen Blick – falls deine Frage fehlt, schreib mir einfach per E-Mail."
         />
 
         <div className="mt-12 flex flex-col gap-4">
