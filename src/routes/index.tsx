@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { useState } from "react";
 import {
   Mail,
   PenTool,
@@ -8,11 +7,9 @@ import {
   Palette,
   FileCheck,
   Layers,
-  ChevronDown,
   ArrowDown,
   ArrowRight,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { ConceptSliders } from "@/components/concept-sliders";
 import {
   BackgroundAsset,
@@ -151,7 +148,6 @@ function Leistungen() {
         <SectionHeading
           eyebrow="Leistungen"
           title="Was ich gestalte"
-          text="Von Plakaten bis zu individuellen Designprojekten – hier bekommst du einen Überblick. Schreib mir einfach, was du brauchst."
         />
 
         <div className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
@@ -267,7 +263,6 @@ function Warum() {
         <SectionHeading
           eyebrow="Vorteile"
           title="Warum Lasse.Design?"
-          text="Das macht Lasse.Design besonders – und warum sich eine Anfrage lohnt."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -332,145 +327,14 @@ function UeberMich() {
   );
 }
 
-/* ----------------------------------- FAQ ----------------------------------- */
+/* ---------------------------------- Divider -------------------------------- */
 
-const FAQS = [
-  {
-    question: "Was kostet ein Design?",
-    answer:
-      "Plakate und Poster kosten 25 € pro Design. Für weitere Designs erstelle ich dir gerne ein individuelles Angebot – schreib mir dazu einfach per E-Mail.",
-  },
-  {
-    question: "Wie lange dauert die Gestaltung?",
-    answer:
-      "Das hängt vom Umfang deines Projekts ab. Melde dich einfach mit deiner Idee per E-Mail und ich sage dir, wie schnell ich sie umsetzen kann.",
-  },
-  {
-    question: "Kann ich eigene Bilder oder Logos einbringen?",
-    answer:
-      "Klar! Wenn du eigene Bilder, Logos oder Vorlagen hast, bring sie gerne ein – so wird dein Design noch persönlicher.",
-  },
-  {
-    question: "Sind Änderungswünsche möglich?",
-    answer:
-      "Ja. Während der Gestaltung schauen wir uns das Ergebnis gemeinsam an und ich passe dein Design an, bis es für dich passt.",
-  },
-  {
-    question: "In welchen Formaten bekomme ich mein Design?",
-    answer:
-      "Dein Design bekommst du in den Formaten, die du brauchst – sprich mich per E-Mail einfach darauf an.",
-  },
-  {
-    question: "Kannst du auch andere Designs erstellen?",
-    answer:
-      "Ja! Neben Postern und Werbeplakaten gestalte ich auch Produktdesigns und weiteres. Frag mich einfach – zusammen finden wir eine Lösung.",
-  },
-  {
-    question: "Brauche ich schon eine genaue Idee?",
-    answer:
-      "Nein. Eine grobe Vorstellung reicht völlig – gemeinsam finden wir heraus, wie dein Design am besten aussieht.",
-  },
-];
-
-function Faq() {
-  const [open, setOpen] = useState<number | null>(0);
-
+function SectionDivider() {
   return (
-    <section id="faq" className="scroll-mt-20 py-20 sm:py-28">
-      <div className="mx-auto max-w-3xl px-5 sm:px-8">
-        <SectionHeading
-          eyebrow="FAQ"
-          title="Häufige Fragen"
-          text="Alles Wichtige auf einen Blick – falls deine Frage fehlt, schreib mir einfach per E-Mail."
-        />
-
-        <div className="mt-12 flex flex-col gap-4">
-          {FAQS.map((faq, i) => {
-            const isOpen = open === i;
-            return (
-              <Reveal key={faq.question} delay={i * 60}>
-                <div
-                  className={cn(
-                    "glass-panel overflow-hidden rounded-xl transition-colors duration-300",
-                    isOpen ? "border-primary/30 shadow-card" : "border-border"
-                  )}
-                >
-                  <button
-                    type="button"
-                    onClick={() => setOpen(isOpen ? null : i)}
-                    aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
-                  >
-                    <span className="font-display text-base font-semibold text-foreground">
-                      {faq.question}
-                    </span>
-                    <ChevronDown
-                      className={cn(
-                        "size-5 shrink-0 text-primary transition-transform duration-300",
-                        isOpen && "rotate-180"
-                      )}
-                      aria-hidden
-                    />
-                  </button>
-                  <div
-                    className={cn(
-                      "grid transition-all duration-300 ease-out",
-                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                    )}
-                  >
-                    <div className="overflow-hidden">
-                      <p className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* --------------------------------- Kontakt --------------------------------- */
-
-function Kontakt() {
-  return (
-    <section id="kontakt" className="scroll-mt-20 py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <Reveal>
-          <div className="glass-panel relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-deep/70 to-primary/25 px-6 py-16 text-center shadow-soft sm:px-16 sm:py-20">
-            <div className="pointer-events-none absolute inset-0" aria-hidden>
-              <div className="absolute -left-20 -top-20 size-64 rounded-full bg-primary-foreground/10 blur-3xl" />
-              <div className="absolute -bottom-24 -right-16 size-72 rounded-full bg-primary-foreground/10 blur-3xl" />
-            </div>
-            <div className="relative flex flex-col items-center gap-6">
-              <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground">
-                <FileCheck className="size-3.5" aria-hidden />
-                Anfrage stellen
-              </span>
-              <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Interesse an einem Design?
-              </h2>
-              <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Schreib mir einfach eine E-Mail – ich melde mich so schnell wie möglich bei dir.
-              </p>
-              <div className="mt-2">
-                <a
-                  href={`mailto:${EMAIL_ADDRESS}`}
-                  className="inline-flex items-center gap-2.5 rounded-full bg-primary-foreground px-8 py-3.5 text-sm font-semibold text-primary shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
-                >
-                  <Mail className="size-4" aria-hidden />
-                  {EMAIL_ADDRESS}
-                </a>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </div>
-    </section>
+    <div
+      aria-hidden
+      className="mx-auto h-px max-w-4xl bg-gradient-to-r from-transparent via-border to-transparent"
+    />
   );
 }
 
@@ -483,12 +347,17 @@ function Index() {
       <Header home />
       <main>
         <Hero />
+        <SectionDivider />
         <Warum />
+        <SectionDivider />
         <Portfolio />
+        <SectionDivider />
         <Leistungen />
+        <SectionDivider />
         <Ablauf />
+        <SectionDivider />
         <UeberMich />
-        <Faq />
+        <SectionDivider />
         <Kontakt />
       </main>
       <Footer home />
