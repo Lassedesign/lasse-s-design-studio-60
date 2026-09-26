@@ -178,16 +178,16 @@
 
 /* Hero slogan — kräftiger Verlauf mit nur zwei Farben */
 @utility slogan-gradient {
-  /* Referenzbild: leuchtendes Cyan → Violett → Pink (Hues 210° → 350°) */
+  /* Referenzbild: Petrolblau → kräftiges Rot (Hues 243° → 25°) */
   background-image: linear-gradient(
     92deg,
-    oklch(0.82 0.14 210) 0%,
-    oklch(0.65 0.25 350) 100%
+    oklch(0.75 0.13 243) 0%,
+    oklch(0.60 0.17 25) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 4px 22px oklch(0.6 0.22 350 / 0.5));
+  filter: drop-shadow(0 4px 22px oklch(0.55 0.16 25 / 0.5));
 }
 
 /* Portfolio placeholder tile gradients — token-based blue tones */
