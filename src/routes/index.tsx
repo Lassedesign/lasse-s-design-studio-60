@@ -455,17 +455,26 @@ function Kontakt() {
                 Interesse an einem Design?
               </h2>
               <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Schreib mir einfach deine Anfrage auf Instagram.
+                Schreib mir einfach eine E-Mail – ich melde mich so schnell wie möglich bei dir.
               </p>
-              <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-flex items-center gap-2.5 rounded-full bg-primary-foreground px-8 py-3.5 text-sm font-semibold text-primary shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
-              >
-                <Instagram className="size-4" aria-hidden />
-                @lasse.design
-              </a>
+              <div className="mt-2 flex flex-col items-center gap-3 sm:flex-row">
+                <a
+                  href={`mailto:${EMAIL_ADDRESS}`}
+                  className="inline-flex items-center gap-2.5 rounded-full bg-primary-foreground px-8 py-3.5 text-sm font-semibold text-primary shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
+                >
+                  <Mail className="size-4" aria-hidden />
+                  {EMAIL_ADDRESS}
+                </a>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-3 text-sm font-semibold text-foreground/85 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary-foreground/60 hover:text-foreground"
+                >
+                  <Instagram className="size-4" aria-hidden />
+                  @lasse.design
+                </a>
+              </div>
             </div>
           </div>
         </Reveal>
