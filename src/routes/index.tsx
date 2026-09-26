@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState } from "react";
 import {
   Instagram,
+  Mail,
   PenTool,
   Heart,
   Handshake,
@@ -19,6 +20,7 @@ import {
   Footer,
   Header,
   INSTAGRAM_URL,
+  EMAIL_ADDRESS,
   Reveal,
   SectionHeading,
 } from "@/components/site-chrome";
@@ -185,7 +187,7 @@ const STEPS = [
   {
     number: "01",
     title: "Anfrage",
-    text: "Du schreibst mir deine Idee direkt auf Instagram.",
+    text: "Du schreibst mir deine Idee einfach per E-Mail.",
   },
   {
     number: "02",
