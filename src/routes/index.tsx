@@ -277,7 +277,7 @@ function Portfolio() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Portfolio"
-          title="Meine Arbeiten"
+          title="Meine Konzepte"
           text="Einblicke in meine Designs – hier findest du eine Auswahl meiner bisherigen Arbeiten, von modernen Werbeplakaten bis hin zu individuellen Designprojekten."
         />
 
