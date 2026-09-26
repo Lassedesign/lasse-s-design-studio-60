@@ -367,13 +367,13 @@ function Kontakt() {
   );
 }
 
-/* ---------------------------------- Divider -------------------------------- */
+/* ------------------------------ Section shading ---------------------------- */
 
-function SectionDivider() {
+function SectionShade() {
   return (
     <div
       aria-hidden
-      className="mx-auto h-px max-w-4xl bg-gradient-to-r from-transparent via-border to-transparent"
+      className="pointer-events-none relative -my-14 h-28 w-full bg-gradient-to-b from-transparent via-background/45 to-transparent"
     />
   );
 }
@@ -387,17 +387,17 @@ function Index() {
       <Header home />
       <main>
         <Hero />
-        <SectionDivider />
+        <SectionShade />
         <Warum />
-        <SectionDivider />
+        <SectionShade />
         <Portfolio />
-        <SectionDivider />
+        <SectionShade />
         <Leistungen />
-        <SectionDivider />
+        <SectionShade />
         <Ablauf />
-        <SectionDivider />
+        <SectionShade />
         <UeberMich />
-        <SectionDivider />
+        <SectionShade />
         <Kontakt />
       </main>
       <Footer home />
