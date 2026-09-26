@@ -327,6 +327,46 @@ function UeberMich() {
   );
 }
 
+/* --------------------------------- Kontakt --------------------------------- */
+
+function Kontakt() {
+  return (
+    <section id="kontakt" className="scroll-mt-20 py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <Reveal>
+          <div className="glass-panel relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-deep/70 to-primary/25 px-6 py-16 text-center shadow-soft sm:px-16 sm:py-20">
+            <div className="pointer-events-none absolute inset-0" aria-hidden>
+              <div className="absolute -left-20 -top-20 size-64 rounded-full bg-primary-foreground/10 blur-3xl" />
+              <div className="absolute -bottom-24 -right-16 size-72 rounded-full bg-primary-foreground/10 blur-3xl" />
+            </div>
+            <div className="relative flex flex-col items-center gap-6">
+              <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground">
+                <FileCheck className="size-3.5" aria-hidden />
+                Anfrage stellen
+              </span>
+              <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Interesse an einem Design?
+              </h2>
+              <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+                Schreib mir einfach eine E-Mail – ich melde mich so schnell wie möglich bei dir.
+              </p>
+              <div className="mt-2">
+                <a
+                  href={`mailto:${EMAIL_ADDRESS}`}
+                  className="inline-flex items-center gap-2.5 rounded-full bg-primary-foreground px-8 py-3.5 text-sm font-semibold text-primary shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
+                >
+                  <Mail className="size-4" aria-hidden />
+                  {EMAIL_ADDRESS}
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------------------------- Divider -------------------------------- */
 
 function SectionDivider() {
