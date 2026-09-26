@@ -134,7 +134,7 @@ export function Header({ home = false }: { home?: boolean }) {
   const navItems = [
     { label: "Konzepte", href: "/konzepte" },
     { label: "Angebote", href: home ? "#leistungen" : "/#leistungen" },
-    { label: "Aufbau", href: home ? "#ablauf" : "/#ablauf" },
+    { label: "Ablauf", href: home ? "#ablauf" : "/#ablauf" },
     { label: "Über mich", href: home ? "#ueber-mich" : "/#ueber-mich" },
     { label: "FAQ", href: home ? "#faq" : "/#faq" },
   ];
@@ -142,7 +142,7 @@ export function Header({ home = false }: { home?: boolean }) {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/55 backdrop-blur-xl">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a
           href={home ? "#top" : "/"}
           className="flex items-center gap-2.5 font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl"
@@ -157,9 +157,9 @@ export function Header({ home = false }: { home?: boolean }) {
           ))}
           <a
             href={kontaktHref}
-            className="ml-2 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-base font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+            className="ml-2 inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
           >
-            <Instagram className="size-4" aria-hidden />
+            <Instagram className="size-3.5" aria-hidden />
             Kontakt
           </a>
         </nav>
