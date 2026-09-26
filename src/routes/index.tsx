@@ -27,8 +27,8 @@ import {
   SectionHeading,
   SLOT_GRADS,
 } from "@/components/site-chrome";
-import slider1Before from "@/assets/slider-1-before.png";
-import slider1After from "@/assets/slider-1-after.png";
+import sandwichBeforeAsset from "@/assets/sandwich-ki-before.png.asset.json";
+import sandwichAfterAsset from "@/assets/sandwich-ki-after.jpg.asset.json";
 import slider2Before from "@/assets/slider-2-before.png";
 import slider2After from "@/assets/slider-2-after.png";
 
@@ -112,11 +112,11 @@ function Hero() {
 
 const SLIDERS = [
   {
-    before: slider1Before,
-    after: slider1After,
-    beforeAlt: "Vorher: schlichtes Kinoabend-Plakat",
-    afterAlt: "Nachher: modernes Kinoabend-Plakat",
-    caption: "Kinoabend – Plakat-Redesign",
+    before: sandwichBeforeAsset.url,
+    after: sandwichAfterAsset.url,
+    beforeAlt: "Vorher: dunkles Toastsandwiches-Plakat",
+    afterAlt: "Nachher: modernes Toast-Sandwich-Plakat",
+    caption: "Sandwich – KI-Redesign",
   },
   {
     before: slider2Before,
