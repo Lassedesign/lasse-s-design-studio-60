@@ -49,7 +49,7 @@ export function BeforeAfterSlider({
     <div
       ref={containerRef}
       className={`group relative select-none overflow-hidden rounded-[16px] shadow-lg shadow-black/30 ${className}`}
-      style={{ touchAction: dragging ? "none" : undefined }}
+      style={{ touchAction: "pan-y" }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={endDrag}
