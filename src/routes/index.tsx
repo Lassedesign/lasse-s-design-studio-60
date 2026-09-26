@@ -1,7 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useState } from "react";
 import {
-  Instagram,
   PenTool,
   Sparkles,
   Heart,
@@ -14,13 +13,18 @@ import {
   Layers,
   ChevronDown,
   ArrowDown,
-  Menu,
-  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
-import backgroundAsset from "@/assets/lasse-blue-background.jpeg.asset.json";
+import {
+  BackgroundAsset,
+  Footer,
+  Header,
+  ImageSlot,
+  Reveal,
+  SectionHeading,
+  SLOT_GRADS,
+} from "@/components/site-chrome";
 import slider1Before from "@/assets/slider-1-before.png";
 import slider1After from "@/assets/slider-1-after.png";
 import slider2Before from "@/assets/slider-2-before.png";
