@@ -1,3 +1,4 @@
 - Karo-Muster (light-grid) entfernen: erledigt
 - Slogan-Verlauf nach Vorlagenbild anpassen, Start Hellblau: erledigt
 - Slogan-Verlauf mit weniger Farben: erledigt
+- Slogan-Verlauf „aus Leidenschaft." ans Referenzbild angleichen: leuchtendes Cyan → Violett → Pink
