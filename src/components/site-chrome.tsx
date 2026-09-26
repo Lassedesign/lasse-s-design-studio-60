@@ -137,7 +137,6 @@ export function Header({ home = false }: { home?: boolean }) {
     { label: "Angebote", href: home ? "#leistungen" : "/#leistungen" },
     { label: "Ablauf", href: home ? "#ablauf" : "/#ablauf" },
     { label: "Über mich", href: home ? "#ueber-mich" : "/#ueber-mich" },
-    { label: "FAQ", href: home ? "#faq" : "/#faq" },
   ];
   const kontaktHref = home ? "#kontakt" : "/#kontakt";
 
