@@ -268,7 +268,7 @@ function Warum() {
               key={benefit.title}
               delay={i * 100}
             >
-              <div className="glass-panel group flex h-full items-start gap-5 rounded-xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft">
+              <div className="glass-panel group flex h-full items-center gap-5 rounded-xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft">
                 <div className="inline-flex size-12 shrink-0 items-center justify-center rounded-2xl bg-accent text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                   <benefit.icon className="size-5.5" strokeWidth={1.8} aria-hidden />
                 </div>
