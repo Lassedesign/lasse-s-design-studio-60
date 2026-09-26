@@ -8,21 +8,18 @@ import diorAsset from "@/assets/poster-dior.png.asset.json";
 import iphoneAsset from "@/assets/poster-iphone.png.asset.json";
 
 export const GALLERY = [
-  {
-    src: iphoneAsset.url,
-    alt: "Werbeplakat: iPhone 17 Pro – Pro. Beyond.",
-  },
+  // Hoch (schmal) + niedrig (breit) abwechselnd, damit alle Spalten gleich hoch sind
   {
     src: flohmarktAsset.url,
     alt: "Plakat: Stadtflohmarkt – Schätze finden. Freude teilen.",
   },
   {
-    src: dbAsset.url,
-    alt: "Plakat: Wir suchen Sicherheitskräfte",
-  },
-  {
     src: barbershopAsset.url,
     alt: "Plakat: Next Level Barbershop – Neuer Look, fairer Preis",
+  },
+  {
+    src: dbAsset.url,
+    alt: "Plakat: Wir suchen Sicherheitskräfte",
   },
   {
     src: diorAsset.url,
@@ -32,13 +29,26 @@ export const GALLERY = [
     src: foodstreetAsset.url,
     alt: "Plakat: Grand Opening Minar-e-Pakistan Food Street",
   },
+  {
+    src: iphoneAsset.url,
+    alt: "Werbeplakat: iPhone 17 Pro – Pro. Beyond.",
+  },
 ];
 
 export function ConceptGallery({ className }: { className?: string }) {
   return (
-    <div className={cn("grid grid-cols-2 gap-5 sm:gap-6 md:grid-cols-3", className)}>
+    <div
+      className={cn(
+        "columns-2 gap-5 sm:gap-6 md:columns-3",
+        className,
+      )}
+    >
       {GALLERY.map((image, i) => (
-        <Reveal key={image.src} delay={(i % 3) * 100}>
+        <Reveal
+          key={image.src}
+          delay={(i % 3) * 100}
+          className="mb-5 break-inside-avoid sm:mb-6"
+        >
           <img
             src={image.src}
             alt={image.alt}
