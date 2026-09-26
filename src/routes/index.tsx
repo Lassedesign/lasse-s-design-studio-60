@@ -262,7 +262,7 @@ function Warum() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Vorteile"
-          title="Individuelle & moderne Designs"
+          title="Warum Lasse.Deisgn?"
         />
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
