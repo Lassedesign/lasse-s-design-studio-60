@@ -176,18 +176,18 @@
   animation: drift-light 12s ease-in-out infinite;
 }
 
-/* Hero slogan — sanfter Verlauf mit nur zwei Farben */
+/* Hero slogan — kräftiger Verlauf mit nur zwei Farben */
 @utility slogan-gradient {
-  /* Exakter Farbverlauf aus dem Anhang, intensiver: Petrolblau → Rotlila (Hues 243° → 342°) */
+  /* Referenzbild: leuchtendes Cyan → Violett → Pink (Hues 210° → 350°) */
   background-image: linear-gradient(
     92deg,
-    oklch(0.72 0.16 243) 0%,
-    oklch(0.58 0.17 342) 100%
+    oklch(0.82 0.14 210) 0%,
+    oklch(0.65 0.25 350) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 4px 22px oklch(0.5 0.16 342 / 0.5));
+  filter: drop-shadow(0 4px 22px oklch(0.6 0.22 350 / 0.5));
 }
 
 /* Portfolio placeholder tile gradients — token-based blue tones */
