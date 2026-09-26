@@ -221,9 +221,10 @@ function Warum() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           title="Warum Lasse.Deisgn?"
+          align="left"
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
           {BENEFITS.map((benefit, i) => (
             <Reveal
               key={benefit.title}
