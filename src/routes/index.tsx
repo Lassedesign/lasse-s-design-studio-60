@@ -328,8 +328,6 @@ function Index() {
         <SectionShade />
         <Leistungen />
         <SectionShade />
-        <Ablauf />
-        <SectionShade />
         <UeberMich />
         <SectionShade />
         <Kontakt />
