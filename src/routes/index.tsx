@@ -116,25 +116,7 @@ function Portfolio() {
           text={"\n"}
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
-          {SLIDERS.map((slider, i) => (
-            <Reveal key={slider.caption} delay={i * 150}>
-              <figure className="flex flex-col gap-4">
-                <BeforeAfterSlider
-                  beforeImage={slider.before}
-                  afterImage={slider.after}
-                  beforeAlt={slider.beforeAlt}
-                  afterAlt={slider.afterAlt}
-                  initialPosition={45}
-                  className="border border-border"
-                />
-                <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
-                  {slider.caption}
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
+        <ConceptSliders />
 
         <div className="mt-16 grid grid-cols-2 gap-5 sm:gap-6 md:grid-cols-4">
           {SLOT_GRADS.slice(0, 4).map((gradient, i) => (
