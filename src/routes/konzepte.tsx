@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { ConceptSliders } from "@/components/concept-sliders";
 import {
   BackgroundAsset,
   Footer,
