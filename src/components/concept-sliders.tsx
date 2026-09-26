@@ -32,7 +32,7 @@ export function ConceptSliders({ className }: { className?: string }) {
     <div className={cn("grid grid-cols-1 gap-8 md:grid-cols-2", className)}>
       {/* Sandwich: Slider + zusätzliches Bild darunter */}
       <Reveal delay={0} className="h-full">
-        <figure className="flex h-full flex-col gap-4 md:grid md:grid-rows-[1fr_auto_1fr] md:gap-4">
+        <figure className="flex h-full flex-col gap-4 md:grid md:grid-rows-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-4">
           <BeforeAfterSlider
             beforeImage={SANDWICH.before}
             afterImage={SANDWICH.after}
