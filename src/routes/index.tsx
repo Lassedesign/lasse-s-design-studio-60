@@ -242,17 +242,17 @@ const BENEFITS = [
   {
     icon: Palette,
     title: "Individuelle & moderne Designs",
-    text: "Keine Designs von der Stange – jedes Projekt wird individuell und modern gestaltet.",
+    text: "Individuell. Modern. Auffällig.",
   },
   {
     icon: Handshake,
     title: "Persönliche Zusammenarbeit",
-    text: "Direkter Austausch und deine Wünsche stehen bei jedem Projekt im Mittelpunkt.",
+    text: "Deine Wünsche. Unser Austausch.",
   },
   {
     icon: Heart,
     title: "Faire Preise",
-    text: "Klare, faire Preise ab 25 € – ohne versteckte Kosten.",
+    text: "Klar. Transparent. Fair.",
   },
 ];
 
@@ -262,7 +262,7 @@ function Warum() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Vorteile"
-          title="Warum Lasse.Design?"
+          title="Individuelle & moderne Designs"
         />
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
