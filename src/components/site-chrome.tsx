@@ -132,7 +132,7 @@ export function Header({ home = false }: { home?: boolean }) {
   const closeMenu = () => setMenuOpen(false);
 
   const navItems = [
-    { label: "Konzepte", href: home ? "#portfolio" : "/konzepte" },
+    { label: "Konzepte", href: "/konzepte" },
     { label: "Angebote", href: home ? "#leistungen" : "/#leistungen" },
     { label: "Über mich", href: home ? "#ueber-mich" : "/#ueber-mich" },
     { label: "FAQ", href: home ? "#faq" : "/#faq" },
