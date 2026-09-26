@@ -540,39 +540,8 @@ function Kontakt() {
   );
 }
 
-/* --------------------------------- Footer ---------------------------------- */
-
-function Footer() {
-  return (
-    <footer className="border-t border-border py-12">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 px-5 text-center sm:px-8">
-        <a
-          href="#top"
-          className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-foreground"
-        >
-          <span>Lasse<span className="text-primary">.</span>Design</span>
-        </a>
-        <p className="font-display text-sm font-medium tracking-wide text-muted-foreground">
-          Auffällig. Einfach. Wirksam. Designs von morgen.
-        </p>
-        <p className="max-w-md text-xs leading-relaxed text-muted-foreground">
-          Lasse.Design ist aktuell ein privates Hobbyprojekt und kein Unternehmen.
-        </p>
-        <a
-          href={INSTAGRAM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-deep"
-        >
-          <Instagram className="size-4" aria-hidden />
-          @lasse.design
-        </a>
-      </div>
-    </footer>
-  );
-}
-
 /* ----------------------------------- Page ---------------------------------- */
+
 
 function Index() {
   return (
