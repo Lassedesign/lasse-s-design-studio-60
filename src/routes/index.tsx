@@ -542,19 +542,11 @@ function Kontakt() {
 
 /* ----------------------------------- Page ---------------------------------- */
 
-
 function Index() {
   return (
     <div className="relative min-h-screen overflow-hidden font-sans text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-20 bg-background" aria-hidden>
-        <img
-          src={backgroundAsset.url}
-          alt=""
-          className="h-full w-full object-cover opacity-90 saturate-125"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/35 to-background/75" />
-      </div>
-      <Header />
+      <BackgroundAsset />
+      <Header home />
       <main>
         <Hero />
         <Portfolio />
