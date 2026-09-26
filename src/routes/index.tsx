@@ -17,15 +17,14 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ConceptSliders } from "@/components/concept-sliders";
+import { ConceptGallery } from "@/components/concept-gallery";
 import {
   BackgroundAsset,
   Footer,
   Header,
-  ImageSlot,
   INSTAGRAM_URL,
   Reveal,
   SectionHeading,
-  SLOT_GRADS,
 } from "@/components/site-chrome";
 
 export const Route = createFileRoute("/")({
@@ -118,11 +117,7 @@ function Portfolio() {
 
         <ConceptSliders />
 
-        <div className="mt-16 grid grid-cols-2 gap-5 sm:gap-6 md:grid-cols-4">
-          {SLOT_GRADS.slice(0, 4).map((gradient, i) => (
-            <ImageSlot key={gradient} gradient={gradient} delay={(i % 4) * 100} />
-          ))}
-        </div>
+        <ConceptGallery className="mt-16" />
       </div>
     </section>
   );

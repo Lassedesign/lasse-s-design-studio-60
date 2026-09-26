@@ -1,13 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { ConceptSliders } from "@/components/concept-sliders";
+import { ConceptGallery } from "@/components/concept-gallery";
 import {
   BackgroundAsset,
   Footer,
   Header,
-  ImageSlot,
   InstagramButton,
   Reveal,
-  SLOT_GRADS,
   SectionHeading,
 } from "@/components/site-chrome";
 
@@ -49,11 +48,7 @@ function KonzeptePage() {
 
             <ConceptSliders className="mt-14" />
 
-            <div className="mt-16 grid grid-cols-2 gap-5 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
-              {SLOT_GRADS.map((gradient, i) => (
-                <ImageSlot key={gradient} gradient={gradient} delay={(i % 4) * 100} />
-              ))}
-            </div>
+            <ConceptGallery className="mt-16" />
 
             <Reveal delay={200} className="mt-16 flex justify-center">
               <div className="flex flex-col items-center gap-4 text-center">
