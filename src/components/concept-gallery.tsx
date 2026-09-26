@@ -37,23 +37,20 @@ export const GALLERY = [
 
 export function ConceptGallery({ className }: { className?: string }) {
   return (
-    <div
-      className={cn(
-        "grid grid-cols-2 gap-5 sm:gap-6 md:grid-cols-3",
-        className,
-      )}
-    >
+    <div className={cn("columns-2 gap-5 sm:gap-6 md:columns-3", className)}>
       {GALLERY.map((image, i) => (
-        <Reveal key={image.src} delay={(i % 3) * 100}>
-          <div className="flex aspect-[3/4] w-full items-center justify-center overflow-hidden rounded-[16px] border border-border bg-card shadow-lg shadow-black/30 transition-transform duration-300 hover:-translate-y-1.5">
-            <img
-              src={image.src}
-              alt={image.alt}
-              loading="lazy"
-              draggable={false}
-              className="h-full w-full object-contain"
-            />
-          </div>
+        <Reveal
+          key={image.src}
+          delay={(i % 3) * 100}
+          className="mb-5 break-inside-avoid sm:mb-6"
+        >
+          <img
+            src={image.src}
+            alt={image.alt}
+            loading="lazy"
+            draggable={false}
+            className="w-full rounded-[16px] border border-border shadow-lg shadow-black/30 transition-transform duration-300 hover:-translate-y-1.5"
+          />
         </Reveal>
       ))}
     </div>
