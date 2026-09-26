@@ -106,23 +106,6 @@ function Hero() {
 
 /* -------------------------------- Portfolio -------------------------------- */
 
-const SLIDERS = [
-  {
-    before: sandwichBeforeAsset.url,
-    after: sandwichAfterAsset.url,
-    beforeAlt: "Vorher: dunkles Toastsandwiches-Plakat",
-    afterAlt: "Nachher: modernes Toast-Sandwich-Plakat",
-    caption: "Sandwich – KI-Redesign",
-  },
-  {
-    before: slider2Before,
-    after: slider2After,
-    beforeAlt: "Vorher: schlichtes Kaffee-Plakat",
-    afterAlt: "Nachher: modernes Kaffee-Plakat",
-    caption: "Neuer Kaffee – Plakat-Redesign",
-  },
-];
-
 function Portfolio() {
   return (
     <section id="portfolio" className="scroll-mt-20 py-20 sm:py-28">
