@@ -54,13 +54,13 @@ export const Route = createFileRoute("/")({
 
 function Hero() {
   return (
-    <section id="top" className="relative min-h-[92vh] overflow-hidden pt-16">
+    <section id="top" className="relative min-h-[76vh] overflow-hidden pt-16">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="animate-drift-light absolute -left-40 top-10 h-28 w-[46rem] rotate-[-12deg] bg-primary/25 blur-3xl" />
         <div className="animate-drift-light absolute -right-64 top-64 h-36 w-[54rem] rotate-[-18deg] bg-primary-deep/30 blur-3xl [animation-delay:-5s]" />
       </div>
 
-      <div className="mx-auto flex max-w-4xl flex-col items-center px-5 pb-24 pt-24 text-center sm:px-8 sm:pb-28 sm:pt-32">
+      <div className="mx-auto flex max-w-4xl flex-col items-center px-5 pb-16 pt-20 text-center sm:px-8 sm:pb-20 sm:pt-24">
         <Reveal>
           <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl">
             Grafikdesign
@@ -146,7 +146,7 @@ const SERVICES = [
 
 function Leistungen() {
   return (
-    <section id="leistungen" className="scroll-mt-20 bg-secondary/25 py-20 backdrop-blur-sm sm:py-28">
+    <section id="leistungen" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Leistungen"
@@ -262,7 +262,7 @@ const BENEFITS = [
 
 function Warum() {
   return (
-    <section id="warum" className="scroll-mt-20 bg-secondary/25 py-20 backdrop-blur-sm sm:py-28">
+    <section id="warum" className="scroll-mt-20 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Vorteile"
@@ -376,7 +376,7 @@ function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-20 bg-secondary/25 py-20 backdrop-blur-sm sm:py-28">
+    <section id="faq" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="FAQ"
@@ -447,14 +447,14 @@ function Kontakt() {
               <div className="absolute -bottom-24 -right-16 size-72 rounded-full bg-primary-foreground/10 blur-3xl" />
             </div>
             <div className="relative flex flex-col items-center gap-6">
-              <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary-foreground">
+              <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground">
                 <FileCheck className="size-3.5" aria-hidden />
                 Anfrage stellen
               </span>
-              <h2 className="font-display text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
+              <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Interesse an einem Design?
               </h2>
-              <p className="max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
+              <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Schreib mir einfach deine Anfrage auf Instagram.
               </p>
               <a

@@ -134,6 +134,7 @@ export function Header({ home = false }: { home?: boolean }) {
   const navItems = [
     { label: "Konzepte", href: "/konzepte" },
     { label: "Angebote", href: home ? "#leistungen" : "/#leistungen" },
+    { label: "Aufbau", href: home ? "#ablauf" : "/#ablauf" },
     { label: "Über mich", href: home ? "#ueber-mich" : "/#ueber-mich" },
     { label: "FAQ", href: home ? "#faq" : "/#faq" },
   ];
@@ -141,22 +142,22 @@ export function Header({ home = false }: { home?: boolean }) {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/55 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a
           href={home ? "#top" : "/"}
-          className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-foreground"
+          className="flex items-center gap-2.5 font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl"
         >
           <span>Lasse<span className="text-primary">.</span>Design</span>
         </a>
         <nav className="hidden items-center gap-1 md:flex" aria-label="Hauptnavigation">
           {navItems.map(({ label, href }) => (
-            <a key={href} href={href} className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground">
+            <a key={href} href={href} className="rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground">
               {label}
             </a>
           ))}
           <a
             href={kontaktHref}
-            className="ml-2 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+            className="ml-2 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-base font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
           >
             <Instagram className="size-4" aria-hidden />
             Kontakt
@@ -178,11 +179,11 @@ export function Header({ home = false }: { home?: boolean }) {
       <div id="mobile-navigation" className={cn("border-t border-border bg-background/80 px-5 backdrop-blur-xl md:hidden", menuOpen ? "block animate-fade-in" : "hidden")}>
         <nav className="mx-auto flex max-w-6xl flex-col gap-1 py-4" aria-label="Mobile Navigation">
           {navItems.map(({ label, href }) => (
-            <a key={href} href={href} onClick={closeMenu} className="rounded-md px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent">
+            <a key={href} href={href} onClick={closeMenu} className="rounded-md px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-accent">
               {label}
             </a>
           ))}
-          <a href={kontaktHref} onClick={closeMenu} className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground">
+          <a href={kontaktHref} onClick={closeMenu} className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-base font-semibold text-primary-foreground">
             <Instagram className="size-4" aria-hidden />
             Kontakt
           </a>
