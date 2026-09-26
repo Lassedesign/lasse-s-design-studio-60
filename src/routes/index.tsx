@@ -16,7 +16,7 @@ import {
   ArrowDown,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { ConceptSliders } from "@/components/concept-sliders";
 import {
   BackgroundAsset,
   Footer,
@@ -27,10 +27,6 @@ import {
   SectionHeading,
   SLOT_GRADS,
 } from "@/components/site-chrome";
-import sandwichBeforeAsset from "@/assets/sandwich-ki-before.png.asset.json";
-import sandwichAfterAsset from "@/assets/sandwich-ki-after.jpg.asset.json";
-import slider2Before from "@/assets/slider-2-before.png";
-import slider2After from "@/assets/slider-2-after.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -110,23 +106,6 @@ function Hero() {
 
 /* -------------------------------- Portfolio -------------------------------- */
 
-const SLIDERS = [
-  {
-    before: sandwichBeforeAsset.url,
-    after: sandwichAfterAsset.url,
-    beforeAlt: "Vorher: dunkles Toastsandwiches-Plakat",
-    afterAlt: "Nachher: modernes Toast-Sandwich-Plakat",
-    caption: "Sandwich – KI-Redesign",
-  },
-  {
-    before: slider2Before,
-    after: slider2After,
-    beforeAlt: "Vorher: schlichtes Kaffee-Plakat",
-    afterAlt: "Nachher: modernes Kaffee-Plakat",
-    caption: "Neuer Kaffee – Plakat-Redesign",
-  },
-];
-
 function Portfolio() {
   return (
     <section id="portfolio" className="scroll-mt-20 py-20 sm:py-28">
@@ -137,25 +116,7 @@ function Portfolio() {
           text={"\n"}
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
-          {SLIDERS.map((slider, i) => (
-            <Reveal key={slider.caption} delay={i * 150}>
-              <figure className="flex flex-col gap-4">
-                <BeforeAfterSlider
-                  beforeImage={slider.before}
-                  afterImage={slider.after}
-                  beforeAlt={slider.beforeAlt}
-                  afterAlt={slider.afterAlt}
-                  initialPosition={45}
-                  className="border border-border"
-                />
-                <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
-                  {slider.caption}
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
+        <ConceptSliders />
 
         <div className="mt-16 grid grid-cols-2 gap-5 sm:gap-6 md:grid-cols-4">
           {SLOT_GRADS.slice(0, 4).map((gradient, i) => (
