@@ -20,7 +20,6 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import backgroundAsset from "@/assets/lasse-blue-background.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -276,11 +275,6 @@ function Portfolio() {
   return (
     <section id="portfolio" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <BeforeAfterSlider
-          className="max-w-2xl"
-          beforeImage="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='800' height='600' fill='%231f2937'/%3E%3Ctext x='400' y='320' fill='%239ca3af' font-size='72' text-anchor='middle' font-family='sans-serif'%3EVORHER%3C/text%3E%3C/svg%3E"
-          afterImage="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='800' height='600' fill='%232563eb'/%3E%3Ctext x='400' y='320' fill='%23ffffff' font-size='72' text-anchor='middle' font-family='sans-serif'%3ENACHHER%3C/text%3E%3C/svg%3E"
-        />
         <SectionHeading
           eyebrow="Portfolio"
           title="Meine Konzepte"
