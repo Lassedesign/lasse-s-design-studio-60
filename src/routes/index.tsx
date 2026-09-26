@@ -242,17 +242,14 @@ const BENEFITS = [
   {
     icon: Palette,
     title: "Individuelle & moderne Designs",
-    text: "Individuell. Modern. Auffällig.",
   },
   {
     icon: Handshake,
     title: "Persönliche Zusammenarbeit",
-    text: "Deine Wünsche. Unser Austausch.",
   },
   {
     icon: Heart,
     title: "Faire Preise",
-    text: "Klar. Transparent. Fair.",
   },
 ];
 
@@ -279,9 +276,6 @@ function Warum() {
                   <h3 className="font-display text-lg font-semibold text-foreground">
                     {benefit.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {benefit.text}
-                  </p>
                 </div>
               </div>
             </Reveal>
