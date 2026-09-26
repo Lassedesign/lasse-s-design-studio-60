@@ -27,10 +27,6 @@ import {
   SectionHeading,
   SLOT_GRADS,
 } from "@/components/site-chrome";
-import sandwichBeforeAsset from "@/assets/sandwich-ki-before.png.asset.json";
-import sandwichAfterAsset from "@/assets/sandwich-ki-after.jpg.asset.json";
-import slider2Before from "@/assets/slider-2-before.png";
-import slider2After from "@/assets/slider-2-after.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
