@@ -33,23 +33,27 @@ export function ConceptSliders({ className }: { className?: string }) {
       {/* Sandwich: Slider + zusätzliches Bild darunter */}
       <Reveal delay={0} className="h-full">
         <figure className="flex h-full flex-col gap-4 md:grid md:grid-rows-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-4">
-          <BeforeAfterSlider
-            beforeImage={SANDWICH.before}
-            afterImage={SANDWICH.after}
-            beforeAlt={SANDWICH.beforeAlt}
-            afterAlt={SANDWICH.afterAlt}
-            initialPosition={45}
-            className="border border-border md:row-start-1 md:h-full md:w-auto md:aspect-[5/4] md:min-h-0 md:justify-self-center"
-          />
+          <div className="relative md:row-start-1">
+            <BeforeAfterSlider
+              beforeImage={SANDWICH.before}
+              afterImage={SANDWICH.after}
+              beforeAlt={SANDWICH.beforeAlt}
+              afterAlt={SANDWICH.afterAlt}
+              initialPosition={45}
+              className="border border-border md:absolute md:inset-y-0 md:left-1/2 md:w-auto md:aspect-[5/4] md:-translate-x-1/2"
+            />
+          </div>
           <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
             {SANDWICH.caption}
           </figcaption>
-          <img
-            src={carportAsset.url}
-            alt="Carport-Plakat – KI-Redesign"
-            draggable={false}
-            className="w-1/2 rounded-[16px] border border-border shadow-lg shadow-black/30 md:row-start-3 md:h-full md:w-auto md:min-h-0 md:justify-self-center"
-          />
+          <div className="relative md:row-start-3">
+            <img
+              src={carportAsset.url}
+              alt="Carport-Plakat – KI-Redesign"
+              draggable={false}
+              className="w-1/2 rounded-[16px] border border-border shadow-lg shadow-black/30 md:absolute md:inset-y-0 md:left-1/2 md:w-auto md:-translate-x-1/2"
+            />
+          </div>
         </figure>
       </Reveal>
       {/* Immobilien: nur Slider */}
