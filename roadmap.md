@@ -5,3 +5,7 @@
 - Angebotskarten zu „Plakate & Poster“ und „Weitere Designs“ vereinfachen: erledigt
 - „Warum Lasse.Design?“ vor die Konzepte verschieben und auf drei Vorteile reduzieren: erledigt
 - Startseiten-Galerie durch „Mehr Designs“-Button ersetzen: erledigt
+- Kontaktbereich kontrastreich gestalten: erledigt
+- Abstand zwischen Einstieg und Vorteilen verkleinern: erledigt
+- Abschnittstrennungen im Hintergrund entfernen: erledigt
+- Navigation vergrößern und „Aufbau“ ergänzen: erledigt
