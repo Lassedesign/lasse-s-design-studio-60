@@ -210,6 +210,12 @@
 @utility tile-grad-6 {
   background: linear-gradient(150deg, oklch(0.56 0.2 282), oklch(0.32 0.17 252));
 }
+@utility tile-grad-7 {
+  background: linear-gradient(150deg, oklch(0.55 0.19 262), oklch(0.34 0.18 246));
+}
+@utility tile-grad-8 {
+  background: linear-gradient(150deg, oklch(0.52 0.18 238), oklch(0.36 0.19 288));
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
