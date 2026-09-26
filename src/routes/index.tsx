@@ -7,7 +7,6 @@ import {
   Heart,
   Sprout,
   Zap,
-  Image as ImageIcon,
   MessageCircle,
   Palette,
   FileCheck,
@@ -20,7 +19,12 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import backgroundAsset from "@/assets/lasse-blue-background.jpeg.asset.json";
+import slider1Before from "@/assets/slider-1-before.png";
+import slider1After from "@/assets/slider-1-after.png";
+import slider2Before from "@/assets/slider-2-before.png";
+import slider2After from "@/assets/slider-2-after.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
