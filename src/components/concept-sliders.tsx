@@ -24,6 +24,9 @@ export const SLIDERS = [
   },
 ];
 
+const SANDWICH = SLIDERS[0]!;
+const IMMOBILIEN = SLIDERS[1]!;
+
 export function ConceptSliders({ className }: { className?: string }) {
   return (
     <div className={cn("grid grid-cols-1 gap-8 md:grid-cols-2", className)}>
