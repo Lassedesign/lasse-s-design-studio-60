@@ -45,13 +45,15 @@ export function ConceptGallery({ className }: { className?: string }) {
     >
       {GALLERY.map((image, i) => (
         <Reveal key={image.src} delay={(i % 3) * 100}>
-          <img
-            src={image.src}
-            alt={image.alt}
-            loading="lazy"
-            draggable={false}
-            className="aspect-[3/4] w-full rounded-[16px] border border-border object-cover shadow-lg shadow-black/30 transition-transform duration-300 hover:-translate-y-1.5"
-          />
+          <div className="flex aspect-[3/4] w-full items-center justify-center overflow-hidden rounded-[16px] border border-border bg-card shadow-lg shadow-black/30 transition-transform duration-300 hover:-translate-y-1.5">
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              draggable={false}
+              className="h-full w-full object-contain"
+            />
+          </div>
         </Reveal>
       ))}
     </div>
