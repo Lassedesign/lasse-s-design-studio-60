@@ -24,9 +24,9 @@ import {
 } from "@/components/site-chrome";
 
 const HOME_POSTERS = [
+  { src: carportPoster.url, alt: "Sommeraktion Stahl Carports – KI-Redesign" },
   { src: dbPoster.url, alt: "DB – Wir suchen Sicherheitskräfte" },
   { src: diorPoster.url, alt: "Dior Sauvage Parfum" },
-  { src: carportPoster.url, alt: "Sommeraktion Stahl Carports – KI-Redesign" },
 ];
 
 export const Route = createFileRoute("/")({
