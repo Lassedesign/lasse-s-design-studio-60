@@ -6,6 +6,10 @@ import dbAsset from "@/assets/poster-db.png.asset.json";
 import barbershopAsset from "@/assets/poster-barbershop.jpg.asset.json";
 import diorAsset from "@/assets/poster-dior.png.asset.json";
 import iphoneAsset from "@/assets/poster-iphone.png.asset.json";
+import personalTrainerAsset from "@/assets/poster-personal-trainer.png.asset.json";
+import carportMadejAsset from "@/assets/poster-carport-madej.png.asset.json";
+import iphoneNaturallyAsset from "@/assets/poster-iphone-naturally.png.asset.json";
+import elektrofuchsAsset from "@/assets/poster-elektrofuchs.png.asset.json";
 
 export const GALLERY = [
   // Hoch (schmal) + niedrig (breit) abwechselnd, damit alle Spalten gleich hoch sind
@@ -32,6 +36,22 @@ export const GALLERY = [
   {
     src: foodstreetAsset.url,
     alt: "Plakat: Grand Opening Minar-e-Pakistan Food Street",
+  },
+  {
+    src: personalTrainerAsset.url,
+    alt: "Plakat: Personal Trainer – Dein Ziel. Dein Plan. Dein Erfolg.",
+  },
+  {
+    src: carportMadejAsset.url,
+    alt: "Plakat: Madej Sommeraktion – Stahl Carports 6x6",
+  },
+  {
+    src: iphoneNaturallyAsset.url,
+    alt: "Werbeplakat: iPhone 17 Pro – Pro. Naturally.",
+  },
+  {
+    src: elektrofuchsAsset.url,
+    alt: "Plakat: Der Elektrofuchs – Wir suchen dich!",
   },
 ];
 
