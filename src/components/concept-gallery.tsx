@@ -26,12 +26,12 @@ export const GALLERY = [
     alt: "Produktdesign: Dior Sauvage Parfum",
   },
   {
-    src: foodstreetAsset.url,
-    alt: "Plakat: Grand Opening Minar-e-Pakistan Food Street",
-  },
-  {
     src: iphoneAsset.url,
     alt: "Werbeplakat: iPhone 17 Pro – Pro. Beyond.",
+  },
+  {
+    src: foodstreetAsset.url,
+    alt: "Plakat: Grand Opening Minar-e-Pakistan Food Street",
   },
 ];
 
