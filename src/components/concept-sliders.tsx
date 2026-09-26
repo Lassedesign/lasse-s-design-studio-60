@@ -51,7 +51,7 @@ export function ConceptSliders({ className }: { className?: string }) {
               src={carportAsset.url}
               alt="Carport-Plakat – KI-Redesign"
               draggable={false}
-              className="w-1/2 rounded-[16px] border border-border shadow-lg shadow-black/30 md:absolute md:inset-y-0 md:left-1/2 md:w-auto md:-translate-x-1/2"
+              className="w-1/2 rounded-[16px] border border-border shadow-lg shadow-black/30 md:absolute md:inset-y-0 md:left-1/2 md:h-full md:w-auto md:-translate-x-1/2"
             />
           </div>
         </figure>
