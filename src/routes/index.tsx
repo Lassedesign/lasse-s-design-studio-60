@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState } from "react";
 import {
   Instagram,
+  Mail,
   PenTool,
   Heart,
   Handshake,
@@ -19,6 +20,7 @@ import {
   Footer,
   Header,
   INSTAGRAM_URL,
+  EMAIL_ADDRESS,
   Reveal,
   SectionHeading,
 } from "@/components/site-chrome";
@@ -185,7 +187,7 @@ const STEPS = [
   {
     number: "01",
     title: "Anfrage",
-    text: "Du schreibst mir deine Idee direkt auf Instagram.",
+    text: "Du schreibst mir deine Idee einfach per E-Mail.",
   },
   {
     number: "02",
@@ -338,12 +340,12 @@ const FAQS = [
   {
     question: "Was kostet ein Design?",
     answer:
-      "Plakate und Poster kosten 25 € pro Design. Für weitere Designs erstelle ich dir gerne ein individuelles Angebot – schreib mir dazu einfach auf Instagram.",
+      "Plakate und Poster kosten 25 € pro Design. Für weitere Designs erstelle ich dir gerne ein individuelles Angebot – schreib mir dazu einfach per E-Mail.",
   },
   {
     question: "Wie lange dauert die Gestaltung?",
     answer:
-      "Das hängt vom Umfang deines Projekts ab. Melde dich einfach mit deiner Idee auf Instagram und ich sage dir, wie schnell ich sie umsetzen kann.",
+      "Das hängt vom Umfang deines Projekts ab. Melde dich einfach mit deiner Idee per E-Mail und ich sage dir, wie schnell ich sie umsetzen kann.",
   },
   {
     question: "Kann ich eigene Bilder oder Logos einbringen?",
@@ -358,7 +360,7 @@ const FAQS = [
   {
     question: "In welchen Formaten bekomme ich mein Design?",
     answer:
-      "Dein Design bekommst du in den Formaten, die du brauchst – sprich mich auf Instagram einfach darauf an.",
+      "Dein Design bekommst du in den Formaten, die du brauchst – sprich mich per E-Mail einfach darauf an.",
   },
   {
     question: "Kannst du auch andere Designs erstellen?",
@@ -381,7 +383,7 @@ function Faq() {
         <SectionHeading
           eyebrow="FAQ"
           title="Häufige Fragen"
-          text="Alles Wichtige auf einen Blick – falls deine Frage fehlt, schreib mir einfach auf Instagram."
+          text="Alles Wichtige auf einen Blick – falls deine Frage fehlt, schreib mir einfach per E-Mail."
         />
 
         <div className="mt-12 flex flex-col gap-4">
@@ -455,17 +457,26 @@ function Kontakt() {
                 Interesse an einem Design?
               </h2>
               <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Schreib mir einfach deine Anfrage auf Instagram.
+                Schreib mir einfach eine E-Mail – ich melde mich so schnell wie möglich bei dir.
               </p>
-              <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-flex items-center gap-2.5 rounded-full bg-primary-foreground px-8 py-3.5 text-sm font-semibold text-primary shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
-              >
-                <Instagram className="size-4" aria-hidden />
-                @lasse.design
-              </a>
+              <div className="mt-2 flex flex-col items-center gap-3 sm:flex-row">
+                <a
+                  href={`mailto:${EMAIL_ADDRESS}`}
+                  className="inline-flex items-center gap-2.5 rounded-full bg-primary-foreground px-8 py-3.5 text-sm font-semibold text-primary shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
+                >
+                  <Mail className="size-4" aria-hidden />
+                  {EMAIL_ADDRESS}
+                </a>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-3 text-sm font-semibold text-foreground/85 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary-foreground/60 hover:text-foreground"
+                >
+                  <Instagram className="size-4" aria-hidden />
+                  @lasse.design
+                </a>
+              </div>
             </div>
           </div>
         </Reveal>

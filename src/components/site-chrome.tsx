@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Instagram, Image as ImageIcon, Menu, X } from "lucide-react";
+import { Instagram, Mail, Image as ImageIcon, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import backgroundAsset from "@/assets/lasse-blue-background.jpeg.asset.json";
 
 export const INSTAGRAM_URL = "https://www.instagram.com/lasse.design";
+export const EMAIL_ADDRESS = "Lasse.Design@gmx.de";
 
 export const SLOT_GRADS = [
   "tile-grad-1",
@@ -211,15 +212,24 @@ export function Footer({ home = false }: { home?: boolean }) {
         <p className="max-w-md text-xs leading-relaxed text-muted-foreground">
           Lasse.Design ist aktuell ein privates Hobbyprojekt und kein Unternehmen.
         </p>
-        <a
-          href={INSTAGRAM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-deep"
-        >
-          <Instagram className="size-4" aria-hidden />
-          @lasse.design
-        </a>
+        <div className="flex flex-col items-center gap-2">
+          <a
+            href={`mailto:${EMAIL_ADDRESS}`}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-deep"
+          >
+            <Mail className="size-4" aria-hidden />
+            {EMAIL_ADDRESS}
+          </a>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Instagram className="size-4" aria-hidden />
+            @lasse.design
+          </a>
+        </div>
       </div>
     </footer>
   );
