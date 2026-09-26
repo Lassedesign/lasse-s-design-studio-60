@@ -175,66 +175,6 @@ function Leistungen() {
   );
 }
 
-/* --------------------------------- Ablauf --------------------------------- */
-
-const STEPS = [
-  {
-    number: "01",
-    title: "Anfrage",
-    text: "Du schreibst mir deine Idee einfach per E-Mail.",
-  },
-  {
-    number: "02",
-    title: "Gestaltung",
-    text: "Ich setze dein Design individuell und mit Sorgfalt um.",
-  },
-  {
-    number: "03",
-    title: "Feedback",
-    text: "Gemeinsam schauen wir uns das Ergebnis an.",
-  },
-  {
-    number: "04",
-    title: "Fertig",
-    text: "Du erhältst dein fertiges Design.",
-  },
-];
-
-function Ablauf() {
-  return (
-    <section id="ablauf" className="scroll-mt-20 py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <SectionHeading
-          eyebrow="Ablauf"
-          title="So funktioniert's"
-          text="In vier einfachen Schritten von der Idee zum fertigen Design."
-        />
-
-        <div className="relative mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          <div
-            className="absolute left-0 right-0 top-7 hidden h-px bg-border lg:block"
-            aria-hidden
-          />
-          {STEPS.map((step, i) => (
-            <Reveal key={step.number} delay={i * 120} className="relative">
-              <div className="flex flex-col items-start">
-                <span className="relative z-10 inline-flex size-14 items-center justify-center rounded-2xl bg-primary font-display text-sm font-bold text-primary-foreground shadow-card">
-                  {step.number}
-                </span>
-                <h3 className="mt-6 font-display text-xl font-semibold text-foreground">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {step.text}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ------------------------------- Warum Lasse ------------------------------- */
 
