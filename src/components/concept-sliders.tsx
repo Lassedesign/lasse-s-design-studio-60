@@ -32,26 +32,24 @@ export function ConceptSliders({ className }: { className?: string }) {
     <div className={cn("grid grid-cols-1 gap-8 md:grid-cols-2", className)}>
       {/* Sandwich: Slider + zusätzliches Bild darunter */}
       <Reveal delay={0} className="h-full">
-        <figure className="flex h-full flex-col gap-4">
+        <figure className="flex h-full flex-col gap-4 md:grid md:grid-rows-[1fr_auto_1fr] md:gap-4">
           <BeforeAfterSlider
             beforeImage={SANDWICH.before}
             afterImage={SANDWICH.after}
             beforeAlt={SANDWICH.beforeAlt}
             afterAlt={SANDWICH.afterAlt}
             initialPosition={45}
-            className="border border-border"
+            className="border border-border md:row-start-1 md:h-full md:w-auto md:aspect-[5/4] md:min-h-0 md:justify-self-center"
           />
           <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
             {SANDWICH.caption}
           </figcaption>
-          <div className="relative md:min-h-0 md:flex-1">
-            <img
-              src={carportAsset.url}
-              alt="Carport-Plakat – KI-Redesign"
-              draggable={false}
-              className="w-1/2 rounded-[16px] border border-border shadow-lg shadow-black/30 md:absolute md:inset-x-0 md:top-0 md:mx-auto md:h-full md:w-auto"
-            />
-          </div>
+          <img
+            src={carportAsset.url}
+            alt="Carport-Plakat – KI-Redesign"
+            draggable={false}
+            className="w-1/2 rounded-[16px] border border-border shadow-lg shadow-black/30 md:row-start-3 md:h-full md:w-auto md:min-h-0 md:justify-self-center"
+          />
         </figure>
       </Reveal>
       {/* Immobilien: nur Slider */}
