@@ -134,6 +134,7 @@ export function Header({ home = false }: { home?: boolean }) {
 
   const navItems = [
     { label: "Konzepte", href: "/konzepte" },
+    { label: "Vorteile", href: home ? "#warum" : "/#warum" },
     { label: "Angebote", href: home ? "#leistungen" : "/#leistungen" },
     { label: "Ablauf", href: home ? "#ablauf" : "/#ablauf" },
     { label: "Über mich", href: home ? "#ueber-mich" : "/#ueber-mich" },
