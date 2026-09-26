@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState } from "react";
 import {
-  Instagram,
   Mail,
   PenTool,
   Heart,
@@ -19,7 +18,6 @@ import {
   BackgroundAsset,
   Footer,
   Header,
-  INSTAGRAM_URL,
   EMAIL_ADDRESS,
   Reveal,
   SectionHeading,
