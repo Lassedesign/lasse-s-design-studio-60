@@ -34,15 +34,15 @@ export function ConceptSliders({ className }: { className?: string }) {
       <Reveal delay={0} className="h-full">
         <figure className="flex h-full flex-col gap-4">
           <BeforeAfterSlider
-            beforeImage={SLIDERS[0].before}
-            afterImage={SLIDERS[0].after}
-            beforeAlt={SLIDERS[0].beforeAlt}
-            afterAlt={SLIDERS[0].afterAlt}
+            beforeImage={SANDWICH.before}
+            afterImage={SANDWICH.after}
+            beforeAlt={SANDWICH.beforeAlt}
+            afterAlt={SANDWICH.afterAlt}
             initialPosition={45}
             className="border border-border"
           />
           <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
-            {SLIDERS[0].caption}
+            {SANDWICH.caption}
           </figcaption>
           <div className="relative md:min-h-0 md:flex-1">
             <img
@@ -58,15 +58,15 @@ export function ConceptSliders({ className }: { className?: string }) {
       <Reveal delay={150} className="h-full">
         <figure className="flex h-full flex-col gap-4">
           <BeforeAfterSlider
-            beforeImage={SLIDERS[1].before}
-            afterImage={SLIDERS[1].after}
-            beforeAlt={SLIDERS[1].beforeAlt}
-            afterAlt={SLIDERS[1].afterAlt}
+            beforeImage={IMMOBILIEN.before}
+            afterImage={IMMOBILIEN.after}
+            beforeAlt={IMMOBILIEN.beforeAlt}
+            afterAlt={IMMOBILIEN.afterAlt}
             initialPosition={45}
             className="border border-border"
           />
           <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
-            {SLIDERS[1].caption}
+            {IMMOBILIEN.caption}
           </figcaption>
         </figure>
       </Reveal>
