@@ -266,13 +266,21 @@ function Hero() {
 
 /* -------------------------------- Portfolio -------------------------------- */
 
-const TILES = [
-  "tile-grad-1",
-  "tile-grad-2",
-  "tile-grad-3",
-  "tile-grad-4",
-  "tile-grad-5",
-  "tile-grad-6",
+const SLIDERS = [
+  {
+    before: slider1Before,
+    after: slider1After,
+    beforeAlt: "Vorher: schlichtes Kinoabend-Plakat",
+    afterAlt: "Nachher: modernes Kinoabend-Plakat",
+    caption: "Kinoabend – Plakat-Redesign",
+  },
+  {
+    before: slider2Before,
+    after: slider2After,
+    beforeAlt: "Vorher: schlichtes Kaffee-Plakat",
+    afterAlt: "Nachher: modernes Kaffee-Plakat",
+    caption: "Neuer Kaffee – Plakat-Redesign",
+  },
 ];
 
 function Portfolio() {
