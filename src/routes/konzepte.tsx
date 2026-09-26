@@ -47,7 +47,9 @@ function KonzeptePage() {
               text="Ein Blick auf meine Gestaltungen – von Plakaten bis zu eigenen Designideen."
             />
 
-            <div className="mt-14 grid grid-cols-2 gap-5 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
+            <ConceptSliders className="mt-14" />
+
+            <div className="mt-16 grid grid-cols-2 gap-5 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
               {SLOT_GRADS.map((gradient, i) => (
                 <ImageSlot key={gradient} gradient={gradient} delay={(i % 4) * 100} />
               ))}
