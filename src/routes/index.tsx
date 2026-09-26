@@ -293,23 +293,22 @@ function Portfolio() {
           text={"\n"}
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TILES.map((grad, i) => (
-            <Reveal key={grad} delay={(i % 3) * 120}>
-              <div
-                className={cn(
-                  grad,
-                  "group relative aspect-[4/5] overflow-hidden rounded-xl border border-border shadow-card transition-all duration-500 hover:-translate-y-1.5 hover:shadow-soft"
-                )}
-              >
-                <div className="absolute inset-4 rounded-2xl border-2 border-dashed border-foreground/15 transition-colors duration-500 group-hover:border-foreground/25" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-foreground/40 transition-colors duration-500 group-hover:text-foreground/55">
-                  <ImageIcon className="size-9" strokeWidth={1.5} aria-hidden />
-                  <span className="font-display text-sm font-medium tracking-wide">
-                    Projektbild folgt
-                  </span>
-                </div>
-              </div>
+        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
+          {SLIDERS.map((slider, i) => (
+            <Reveal key={slider.caption} delay={i * 150}>
+              <figure className="flex flex-col gap-4">
+                <BeforeAfterSlider
+                  beforeImage={slider.before}
+                  afterImage={slider.after}
+                  beforeAlt={slider.beforeAlt}
+                  afterAlt={slider.afterAlt}
+                  initialPosition={45}
+                  className="border border-border"
+                />
+                <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
+                  {slider.caption}
+                </figcaption>
+              </figure>
             </Reveal>
           ))}
         </div>
