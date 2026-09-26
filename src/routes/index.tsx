@@ -373,7 +373,7 @@ function SectionShade() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none relative -my-14 h-28 w-full bg-gradient-to-b from-transparent via-background/45 to-transparent"
+      className="pointer-events-none relative -my-24 h-48 w-full bg-gradient-to-b from-transparent via-background/12 to-transparent"
     />
   );
 }
