@@ -22,6 +22,7 @@ import {
   Footer,
   Header,
   ImageSlot,
+  INSTAGRAM_URL,
   Reveal,
   SectionHeading,
   SLOT_GRADS,
