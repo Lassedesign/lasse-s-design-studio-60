@@ -278,7 +278,7 @@ function Portfolio() {
         <SectionHeading
           eyebrow="Portfolio"
           title="Meine Konzepte"
-          text="Einblicke in meine Designs – hier findest du eine Auswahl meiner bisherigen Arbeiten, von modernen Werbeplakaten bis hin zu individuellen Designprojekten."
+          text="\n"
         />
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
