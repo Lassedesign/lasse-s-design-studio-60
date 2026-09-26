@@ -387,17 +387,17 @@ function Index() {
       <Header home />
       <main>
         <Hero />
-        <SectionDivider />
+        <SectionShade />
         <Warum />
-        <SectionDivider />
+        <SectionShade />
         <Portfolio />
-        <SectionDivider />
+        <SectionShade />
         <Leistungen />
-        <SectionDivider />
+        <SectionShade />
         <Ablauf />
-        <SectionDivider />
+        <SectionShade />
         <UeberMich />
-        <SectionDivider />
+        <SectionShade />
         <Kontakt />
       </main>
       <Footer home />
