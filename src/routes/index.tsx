@@ -16,7 +16,7 @@ import {
   ArrowDown,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { ConceptSliders } from "@/components/concept-sliders";
 import {
   BackgroundAsset,
   Footer,
