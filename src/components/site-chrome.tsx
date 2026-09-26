@@ -69,7 +69,7 @@ export function SectionHeading({
   text,
   align = "center",
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   text?: string;
   align?: "center" | "left";
@@ -81,9 +81,11 @@ export function SectionHeading({
         align === "center" ? "items-center text-center" : "items-start text-left"
       )}
     >
-      <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground">
-        {eyebrow}
-      </span>
+      {eyebrow ? (
+        <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground">
+          {eyebrow}
+        </span>
+      ) : null}
       <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
         {title}
       </h2>
