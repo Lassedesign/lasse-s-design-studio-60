@@ -41,12 +41,12 @@ export function ConceptSliders({ className }: { className?: string }) {
           <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
             {SLIDERS[0].caption}
           </figcaption>
-          <div className="flex flex-1 items-start justify-center md:min-h-0">
+          <div className="relative md:min-h-0 md:flex-1">
             <img
               src={carportAsset.url}
               alt="Carport-Plakat – KI-Redesign"
               draggable={false}
-              className="h-auto w-2/3 rounded-[16px] border border-border object-contain shadow-lg shadow-black/30 md:h-full md:w-auto md:max-w-full"
+              className="w-1/2 rounded-[16px] border border-border shadow-lg shadow-black/30 md:absolute md:inset-x-0 md:top-0 md:mx-auto md:h-full md:w-auto"
             />
           </div>
         </figure>
