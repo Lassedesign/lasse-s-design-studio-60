@@ -220,7 +220,6 @@ function Warum() {
     <section id="warum" className="scroll-mt-20 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Vorteile"
           title="Warum Lasse.Deisgn?"
         />
 
