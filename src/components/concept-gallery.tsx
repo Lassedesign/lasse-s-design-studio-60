@@ -9,8 +9,8 @@ import iphoneAsset from "@/assets/poster-iphone.png.asset.json";
 
 export const GALLERY = [
   {
-    src: foodstreetAsset.url,
-    alt: "Plakat: Grand Opening Minar-e-Pakistan Food Street",
+    src: iphoneAsset.url,
+    alt: "Werbeplakat: iPhone 17 Pro – Pro. Beyond.",
   },
   {
     src: flohmarktAsset.url,
@@ -29,8 +29,8 @@ export const GALLERY = [
     alt: "Produktdesign: Dior Sauvage Parfum",
   },
   {
-    src: iphoneAsset.url,
-    alt: "Werbeplakat: iPhone 17 Pro – Pro. Beyond.",
+    src: foodstreetAsset.url,
+    alt: "Plakat: Grand Opening Minar-e-Pakistan Food Street",
   },
 ];
 
