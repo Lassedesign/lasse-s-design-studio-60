@@ -1,23 +1,19 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState } from "react";
 import {
   Instagram,
   PenTool,
-  Sparkles,
   Heart,
-  Sprout,
-  Zap,
-  MessageCircle,
+  Handshake,
   Palette,
   FileCheck,
-  Package,
   Layers,
   ChevronDown,
   ArrowDown,
+  ArrowRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ConceptSliders } from "@/components/concept-sliders";
-import { ConceptGallery } from "@/components/concept-gallery";
 import {
   BackgroundAsset,
   Footer,
@@ -117,7 +113,15 @@ function Portfolio() {
 
         <ConceptSliders />
 
-        <ConceptGallery className="mt-16" />
+        <Reveal delay={150} className="mt-12 flex justify-center">
+          <Link
+            to="/konzepte"
+            className="group inline-flex items-center gap-2.5 rounded-md bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+          >
+            Mehr Designs
+            <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
@@ -128,21 +132,9 @@ function Portfolio() {
 const SERVICES = [
   {
     icon: PenTool,
-    title: "Poster & Plakate",
+    title: "Plakate & Poster",
     price: "25 € pro Design",
-    description: "Gestaltete Poster und Plakate – modern und auf dich zugeschnitten.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Werbeplakate",
-    price: "ab 25 €",
-    description: "Auffällige Werbeplakate, die deine Botschaft klar rüberbringen.",
-  },
-  {
-    icon: Package,
-    title: "Produktdesigns",
-    price: "Preis auf Anfrage",
-    description: "Individuelle Designs für deine Produkte – sprich mich einfach an.",
+    description: "Egal ob Unternehmen, Werbeaktion, Flohmarkt oder privates Event – jedes Plakat wird individuell gestaltet, zum gleichen fairen Preis",
   },
   {
     icon: Layers,
@@ -162,7 +154,7 @@ function Leistungen() {
           text="Von Plakaten bis zu individuellen Designprojekten – hier bekommst du einen Überblick. Schreib mir einfach, was du brauchst."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
           {SERVICES.map((service, i) => (
             <Reveal key={service.title} delay={i * 100}>
               <div className="glass-panel group flex h-full flex-col rounded-xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft">
@@ -252,29 +244,19 @@ function Ablauf() {
 
 const BENEFITS = [
   {
-    icon: Zap,
-    title: "Schnelle Umsetzung",
-    text: "Dein Design wird zügig gestaltet, ohne lange Wartezeiten.",
+    icon: Palette,
+    title: "Individuelle & moderne Designs",
+    text: "Keine Designs von der Stange – jedes Projekt wird individuell und modern gestaltet.",
   },
   {
-    icon: Palette,
-    title: "Individuelles Design",
-    text: "Keine Vorlagen von der Stange – dein Design wird für dich gemacht.",
+    icon: Handshake,
+    title: "Persönliche Zusammenarbeit",
+    text: "Direkter Austausch und deine Wünsche stehen bei jedem Projekt im Mittelpunkt.",
   },
   {
     icon: Heart,
     title: "Faire Preise",
     text: "Klare, faire Preise ab 25 € – ohne versteckte Kosten.",
-  },
-  {
-    icon: Sparkles,
-    title: "Mit Leidenschaft gestaltet",
-    text: "Jedes Design entsteht mit Herzblut und Liebe zum Detail.",
-  },
-  {
-    icon: Sprout,
-    title: "Du unterstützt einen jungen Designer",
-    text: "Mit einer Anfrage unterstützt du einen 16-Jährigen auf seinem Weg.",
   },
 ];
 
@@ -288,16 +270,11 @@ function Warum() {
           text="Das macht Lasse.Design besonders – und warum sich eine Anfrage lohnt."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-6">
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           {BENEFITS.map((benefit, i) => (
             <Reveal
               key={benefit.title}
-              delay={(i % 3) * 100}
-              className={cn(
-                "md:col-span-2",
-                i === 3 && "md:col-span-3",
-                i === 4 && "md:col-span-3"
-              )}
+              delay={i * 100}
             >
               <div className="glass-panel group flex h-full items-start gap-5 rounded-xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft">
                 <div className="inline-flex size-12 shrink-0 items-center justify-center rounded-2xl bg-accent text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
@@ -361,7 +338,7 @@ const FAQS = [
   {
     question: "Was kostet ein Design?",
     answer:
-      "Poster und Plakate starten bei 25 € pro Design. Für Produktdesigns und weitere Designs erstelle ich dir gerne ein individuelles Angebot – schreib mir dazu einfach auf Instagram.",
+      "Plakate und Poster kosten 25 € pro Design. Für weitere Designs erstelle ich dir gerne ein individuelles Angebot – schreib mir dazu einfach auf Instagram.",
   },
   {
     question: "Wie lange dauert die Gestaltung?",
@@ -506,10 +483,10 @@ function Index() {
       <Header home />
       <main>
         <Hero />
+        <Warum />
         <Portfolio />
         <Leistungen />
         <Ablauf />
-        <Warum />
         <UeberMich />
         <Faq />
         <Kontakt />

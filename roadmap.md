@@ -2,3 +2,6 @@
 - Slogan-Verlauf nach Vorlagenbild anpassen, Start Hellblau: erledigt
 - Slogan-Verlauf mit weniger Farben: erledigt
 - Slogan-Verlauf „aus Leidenschaft." ans Referenzbild angleichen: leuchtendes Cyan → Violett → Pink
+- Angebotskarten zu „Plakate & Poster“ und „Weitere Designs“ vereinfachen: erledigt
+- „Warum Lasse.Design?“ vor die Konzepte verschieben und auf drei Vorteile reduzieren: erledigt
+- Startseiten-Galerie durch „Mehr Designs“-Button ersetzen: erledigt
