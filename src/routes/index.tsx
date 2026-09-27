@@ -64,13 +64,13 @@ export const Route = createFileRoute("/")({
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-16">
+    <section id="top" className="relative overflow-hidden pt-6">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="animate-drift-light absolute -left-40 top-10 h-28 w-[46rem] rotate-[-12deg] bg-primary/25 blur-3xl" />
         <div className="animate-drift-light absolute -right-64 top-64 h-36 w-[54rem] rotate-[-18deg] bg-primary-deep/30 blur-3xl [animation-delay:-5s]" />
       </div>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-24 lg:grid-cols-[1.1fr_1fr]">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 pb-16 pt-10 sm:px-8 sm:pb-20 sm:pt-14 lg:grid-cols-[1.1fr_1fr]">
         <div className="flex flex-col text-center lg:text-left">
           <Reveal>
             <h1 className="font-display font-bold leading-[1.05] tracking-tight text-foreground">
