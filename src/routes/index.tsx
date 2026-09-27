@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import dbMockup from "@/assets/poster-db-mockup.png.asset.json";
 import diorMockup from "@/assets/poster-dior-mockup.png.asset.json";
-import carportMockup from "@/assets/poster-carport-mockup.png.asset.json";
+import carportMockup from "@/assets/poster-carport-mockup2.jpg.asset.json";
 import { ConceptSliders } from "@/components/concept-sliders";
 import {
   BackgroundAsset,
