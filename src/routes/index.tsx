@@ -87,7 +87,7 @@ function Hero() {
           </p>
         </Reveal>
 
-        <Reveal delay={300} className="mx-auto w-full max-w-2xl">
+        <Reveal delay={300} className="mx-auto w-full max-w-xl">
           <BeforeAfterSlider
             beforeImage={sandwichBeforeAsset.url}
             afterImage={sandwichAfterAsset.url}
