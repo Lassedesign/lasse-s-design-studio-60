@@ -54,6 +54,10 @@ export const GALLERY = [
     src: elektrofuchsAsset.url,
     alt: "Plakat: Der Elektrofuchs – Wir suchen dich!",
   },
+  {
+    src: hackfleischspiessAsset.url,
+    alt: "Plakat: Georgische Hackfleischspieß – Jetzt probieren!",
+  },
 ];
 
 export function ConceptGallery({ className }: { className?: string }) {
