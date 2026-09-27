@@ -70,8 +70,8 @@ function Hero() {
         <div className="animate-drift-light absolute -right-64 top-64 h-36 w-[54rem] rotate-[-18deg] bg-primary-deep/30 blur-3xl [animation-delay:-5s]" />
       </div>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-24 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+      <div className="mx-auto flex max-w-6xl flex-col items-center px-5 pb-16 pt-20 text-center sm:px-8 sm:pb-20 sm:pt-24">
+        <div className="flex flex-col items-center text-center">
           <Reveal>
             <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
               Grafikdesign
@@ -106,20 +106,6 @@ function Hero() {
             </a>
           </Reveal>
         </div>
-
-        <Reveal delay={250} className="mx-auto w-full max-w-md lg:mx-0">
-          <BeforeAfterSlider
-            beforeImage={sandwichBeforeAsset.url}
-            afterImage={sandwichAfterAsset.url}
-            beforeAlt="Vorher: dunkles Toastsandwiches-Plakat"
-            afterAlt="Nachher: modernes Toast-Sandwich-Plakat"
-            initialPosition={45}
-            className="border border-border"
-          />
-          <p className="mt-3 text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
-            Sandwich – KI-Redesign
-          </p>
-        </Reveal>
       </div>
     </section>
   );
@@ -128,6 +114,23 @@ function Hero() {
 /* -------------------------------- Portfolio -------------------------------- */
 
 function Portfolio() {
+  const sliders = [
+    {
+      before: sandwichBeforeAsset.url,
+      after: sandwichAfterAsset.url,
+      beforeAlt: "Vorher: dunkles Toastsandwiches-Plakat",
+      afterAlt: "Nachher: modernes Toast-Sandwich-Plakat",
+      caption: "Sandwich – KI-Redesign",
+    },
+    {
+      before: immobilienBeforeAsset.url,
+      after: immobilienAfterAsset.url,
+      beforeAlt: "Vorher: klassisches Immobilien-Plakat",
+      afterAlt: "Nachher: modernes Immobilien-Plakat",
+      caption: "Immobilien – KI-Redesign",
+    },
+  ];
+
   return (
     <section id="portfolio" className="scroll-mt-20 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -137,21 +140,25 @@ function Portfolio() {
           text={"\n"}
         />
 
-        <Reveal className="mx-auto w-full max-w-4xl">
-          <figure className="flex flex-col gap-4">
-            <BeforeAfterSlider
-              beforeImage={immobilienBeforeAsset.url}
-              afterImage={immobilienAfterAsset.url}
-              beforeAlt="Vorher: klassisches Immobilien-Plakat"
-              afterAlt="Nachher: modernes Immobilien-Plakat"
-              initialPosition={45}
-              className="border border-border"
-            />
-            <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
-              Immobilien – KI-Redesign
-            </figcaption>
-          </figure>
-        </Reveal>
+        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-8 md:grid-cols-2">
+          {sliders.map((slider, i) => (
+            <Reveal key={slider.caption} delay={i * 100}>
+              <figure className="flex flex-col gap-4">
+                <BeforeAfterSlider
+                  beforeImage={slider.before}
+                  afterImage={slider.after}
+                  beforeAlt={slider.beforeAlt}
+                  afterAlt={slider.afterAlt}
+                  initialPosition={45}
+                  className="border border-border"
+                />
+                <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
+                  {slider.caption}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-6">
           {HOME_POSTERS.map((poster, i) => (
