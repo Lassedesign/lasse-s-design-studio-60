@@ -43,7 +43,6 @@ function KonzeptePage() {
             <SectionHeading
               eyebrow="Portfolio"
               title="Meine Konzepte"
-              text="\n"
             />
 
             <ConceptSliders className="mt-14" />
