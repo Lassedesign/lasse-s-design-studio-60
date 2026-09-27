@@ -278,7 +278,7 @@ function Warum() {
     <section id="warum" className="scroll-mt-20 pb-16 pt-4 sm:pb-20 sm:pt-6">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
-          title="Warum Lasse.Deisgn?"
+          title="Warum Lasse.Design?"
           align="left"
         />
 
