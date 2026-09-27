@@ -87,7 +87,21 @@ function Hero() {
           </p>
         </Reveal>
 
-        <Reveal delay={300}>
+        <Reveal delay={300} className="mx-auto w-full max-w-2xl">
+          <BeforeAfterSlider
+            beforeImage={sandwichBeforeAsset.url}
+            afterImage={sandwichAfterAsset.url}
+            beforeAlt="Vorher: dunkles Toastsandwiches-Plakat"
+            afterAlt="Nachher: modernes Toast-Sandwich-Plakat"
+            initialPosition={45}
+            className="border border-border"
+          />
+          <p className="mt-3 text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
+            Sandwich – KI-Redesign
+          </p>
+        </Reveal>
+
+        <Reveal delay={400}>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             Ich bin Lasse, 16 Jahre alt und beschäftige mich leidenschaftlich mit
             Grafikdesign. Bei Lasse.Design entstehen moderne und individuelle Designs –
