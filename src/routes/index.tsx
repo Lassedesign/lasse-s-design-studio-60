@@ -70,24 +70,44 @@ function Hero() {
         <div className="animate-drift-light absolute -right-64 top-64 h-36 w-[54rem] rotate-[-18deg] bg-primary-deep/30 blur-3xl [animation-delay:-5s]" />
       </div>
 
-      <div className="mx-auto flex max-w-4xl flex-col items-center px-5 pb-16 pt-20 text-center sm:px-8 sm:pb-20 sm:pt-24">
-        <Reveal>
-          <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl">
-            Grafikdesign
-            <br />
-            <span className="slogan-gradient">
-              aus Leidenschaft.
-            </span>
-          </h1>
-        </Reveal>
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-24 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <Reveal>
+            <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+              Grafikdesign
+              <br />
+              <span className="slogan-gradient">
+                aus Leidenschaft.
+              </span>
+            </h1>
+          </Reveal>
 
-        <Reveal delay={200}>
-          <p className="mt-6 font-display text-lg font-medium tracking-wide text-primary sm:text-xl">
-            Auffällig. Einfach. Wirksam.
-          </p>
-        </Reveal>
+          <Reveal delay={200}>
+            <p className="mt-6 font-display text-lg font-medium tracking-wide text-primary sm:text-xl">
+              Auffällig. Einfach. Wirksam.
+            </p>
+          </Reveal>
 
-        <Reveal delay={300} className="mx-auto mt-12 w-full max-w-xl sm:mt-14">
+          <Reveal delay={300}>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Ich bin Lasse, 16 Jahre alt und beschäftige mich leidenschaftlich mit
+              Grafikdesign. Bei Lasse.Design entstehen moderne und individuelle Designs –
+              aktuell als Hobby und aus Spaß am Gestalten.
+            </p>
+          </Reveal>
+
+          <Reveal delay={400}>
+            <a
+              href="#portfolio"
+              className="group mt-10 inline-flex items-center gap-2.5 rounded-md bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+            >
+              Portfolio ansehen
+              <ArrowDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" aria-hidden />
+            </a>
+          </Reveal>
+        </div>
+
+        <Reveal delay={250} className="w-full">
           <BeforeAfterSlider
             beforeImage={sandwichBeforeAsset.url}
             afterImage={sandwichAfterAsset.url}
@@ -99,24 +119,6 @@ function Hero() {
           <p className="mt-3 text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
             Sandwich – KI-Redesign
           </p>
-        </Reveal>
-
-        <Reveal delay={400}>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Ich bin Lasse, 16 Jahre alt und beschäftige mich leidenschaftlich mit
-            Grafikdesign. Bei Lasse.Design entstehen moderne und individuelle Designs –
-            aktuell als Hobby und aus Spaß am Gestalten.
-          </p>
-        </Reveal>
-
-        <Reveal delay={400}>
-          <a
-            href="#portfolio"
-            className="group mt-10 inline-flex items-center gap-2.5 rounded-md bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
-          >
-            Portfolio ansehen
-            <ArrowDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" aria-hidden />
-          </a>
         </Reveal>
       </div>
     </section>
