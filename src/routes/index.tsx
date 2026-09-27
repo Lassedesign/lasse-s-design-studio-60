@@ -13,7 +13,11 @@ import {
 import dbMockup from "@/assets/poster-db-mockup.png.asset.json";
 import diorMockup from "@/assets/poster-dior-mockup.png.asset.json";
 import carportMockup from "@/assets/poster-carport-mockup2.jpg.asset.json";
-import { ConceptSliders } from "@/components/concept-sliders";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import sandwichBeforeAsset from "@/assets/sandwich-ki-before.png.asset.json";
+import sandwichAfterAsset from "@/assets/sandwich-ki-after.jpg.asset.json";
+import immobilienBeforeAsset from "@/assets/immobilien-ki-before.png.asset.json";
+import immobilienAfterAsset from "@/assets/immobilien-ki-after.png.asset.json";
 import {
   BackgroundAsset,
   Footer,
@@ -83,7 +87,21 @@ function Hero() {
           </p>
         </Reveal>
 
-        <Reveal delay={300}>
+        <Reveal delay={300} className="mx-auto w-full max-w-xl">
+          <BeforeAfterSlider
+            beforeImage={sandwichBeforeAsset.url}
+            afterImage={sandwichAfterAsset.url}
+            beforeAlt="Vorher: dunkles Toastsandwiches-Plakat"
+            afterAlt="Nachher: modernes Toast-Sandwich-Plakat"
+            initialPosition={45}
+            className="border border-border"
+          />
+          <p className="mt-3 text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
+            Sandwich – KI-Redesign
+          </p>
+        </Reveal>
+
+        <Reveal delay={400}>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             Ich bin Lasse, 16 Jahre alt und beschäftige mich leidenschaftlich mit
             Grafikdesign. Bei Lasse.Design entstehen moderne und individuelle Designs –
@@ -117,7 +135,21 @@ function Portfolio() {
           text={"\n"}
         />
 
-        <ConceptSliders />
+        <Reveal className="mx-auto w-full max-w-4xl">
+          <figure className="flex flex-col gap-4">
+            <BeforeAfterSlider
+              beforeImage={immobilienBeforeAsset.url}
+              afterImage={immobilienAfterAsset.url}
+              beforeAlt="Vorher: klassisches Immobilien-Plakat"
+              afterAlt="Nachher: modernes Immobilien-Plakat"
+              initialPosition={45}
+              className="border border-border"
+            />
+            <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
+              Immobilien – KI-Redesign
+            </figcaption>
+          </figure>
+        </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-6">
           {HOME_POSTERS.map((poster, i) => (
