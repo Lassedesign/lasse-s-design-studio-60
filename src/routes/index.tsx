@@ -24,9 +24,9 @@ import {
 } from "@/components/site-chrome";
 
 const HOME_POSTERS = [
+  { src: carportMockup.url, alt: "Sommeraktion Stahl Carports 6x6 – KI-Redesign (auf einem Werbetafel-Gestell)" },
   { src: dbMockup.url, alt: "DB – Wir suchen Sicherheitskräfte (Plakat in der Bahn)" },
   { src: diorMockup.url, alt: "Dior Sauvage Parfum (Plakat im Schaufenster)" },
-  { src: carportMockup.url, alt: "Sommeraktion Stahl Carports 6x6 – KI-Redesign (auf einem Werbetafel-Gestell)" },
 ];
 
 export const Route = createFileRoute("/")({
