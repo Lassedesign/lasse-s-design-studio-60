@@ -13,7 +13,11 @@ import {
 import dbMockup from "@/assets/poster-db-mockup.png.asset.json";
 import diorMockup from "@/assets/poster-dior-mockup.png.asset.json";
 import carportMockup from "@/assets/poster-carport-mockup2.jpg.asset.json";
-import { ConceptSliders } from "@/components/concept-sliders";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import sandwichBeforeAsset from "@/assets/sandwich-ki-before.png.asset.json";
+import sandwichAfterAsset from "@/assets/sandwich-ki-after.jpg.asset.json";
+import immobilienBeforeAsset from "@/assets/immobilien-ki-before.png.asset.json";
+import immobilienAfterAsset from "@/assets/immobilien-ki-after.png.asset.json";
 import {
   BackgroundAsset,
   Footer,
