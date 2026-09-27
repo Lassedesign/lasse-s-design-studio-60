@@ -73,9 +73,11 @@ function Hero() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-24 lg:grid-cols-[1.1fr_1fr]">
         <div className="flex flex-col text-center lg:text-left">
           <Reveal>
-            <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl">
-              Grafikdesign{" "}
-              <span className="slogan-gradient">aus Leidenschaft.</span>
+            <h1 className="font-display font-bold leading-[1.05] tracking-tight text-foreground">
+              <span className="block text-5xl sm:text-6xl">Grafikdesign</span>{" "}
+              <span className="slogan-gradient mt-2 block whitespace-nowrap text-4xl sm:text-5xl">
+                aus Leidenschaft.
+              </span>
             </h1>
           </Reveal>
 
