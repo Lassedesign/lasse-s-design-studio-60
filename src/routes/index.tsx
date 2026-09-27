@@ -106,7 +106,7 @@ function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={300} className="mx-auto w-full max-w-md">
+        <Reveal delay={300} className="mx-auto w-full max-w-md lg:mt-12">
           <figure className="flex flex-col gap-4">
             <BeforeAfterSlider
               beforeImage={sandwichBeforeAsset.url}
