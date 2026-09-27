@@ -181,14 +181,14 @@
   /* Verlauf aus dem Referenzbild: Blau → Violett → Pink */
   background-image: linear-gradient(
     92deg,
-    rgb(63, 140, 232) 0%,
-    rgb(168, 85, 247) 50%,
-    rgb(236, 44, 148) 100%
+    rgb(35, 125, 245) 0%,
+    rgb(160, 60, 255) 50%,
+    rgb(250, 20, 140) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 4px 22px rgb(236 44 148 / 0.45));
+  filter: drop-shadow(0 4px 22px rgb(250 20 140 / 0.5));
 }
 
 /* Portfolio placeholder tile gradients — token-based blue tones */
