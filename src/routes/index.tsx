@@ -135,7 +135,21 @@ function Portfolio() {
           text={"\n"}
         />
 
-        <ConceptSliders />
+        <Reveal className="mx-auto w-full max-w-4xl">
+          <figure className="flex flex-col gap-4">
+            <BeforeAfterSlider
+              beforeImage={immobilienBeforeAsset.url}
+              afterImage={immobilienAfterAsset.url}
+              beforeAlt="Vorher: klassisches Immobilien-Plakat"
+              afterAlt="Nachher: modernes Immobilien-Plakat"
+              initialPosition={45}
+              className="border border-border"
+            />
+            <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
+              Immobilien – KI-Redesign
+            </figcaption>
+          </figure>
+        </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-6">
           {HOME_POSTERS.map((poster, i) => (
