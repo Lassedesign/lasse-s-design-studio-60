@@ -10,6 +10,7 @@ import personalTrainerAsset from "@/assets/poster-personal-trainer.png.asset.jso
 import carportMadejAsset from "@/assets/poster-carport-madej.png.asset.json";
 import iphoneNaturallyAsset from "@/assets/poster-iphone-naturally.png.asset.json";
 import elektrofuchsAsset from "@/assets/poster-elektrofuchs.png.asset.json";
+import hackfleischspiessAsset from "@/assets/poster-hackfleischspiess.jpg.asset.json";
 
 export const GALLERY = [
   // Hoch (schmal) + niedrig (breit) abwechselnd, damit alle Spalten gleich hoch sind
@@ -52,6 +53,10 @@ export const GALLERY = [
   {
     src: elektrofuchsAsset.url,
     alt: "Plakat: Der Elektrofuchs – Wir suchen dich!",
+  },
+  {
+    src: hackfleischspiessAsset.url,
+    alt: "Plakat: Georgische Hackfleischspieß – Jetzt probieren!",
   },
 ];
 
