@@ -73,7 +73,7 @@ function Hero() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-24 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <Reveal>
-            <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+            <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
               Grafikdesign
               <br />
               <span className="slogan-gradient">
@@ -107,7 +107,7 @@ function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={250} className="w-full">
+        <Reveal delay={250} className="mx-auto w-full max-w-md lg:mx-0">
           <BeforeAfterSlider
             beforeImage={sandwichBeforeAsset.url}
             afterImage={sandwichAfterAsset.url}
