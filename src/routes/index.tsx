@@ -70,15 +70,12 @@ function Hero() {
         <div className="animate-drift-light absolute -right-64 top-64 h-36 w-[54rem] rotate-[-18deg] bg-primary-deep/30 blur-3xl [animation-delay:-5s]" />
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col items-center px-5 pb-16 pt-20 text-center sm:px-8 sm:pb-20 sm:pt-24">
-        <div className="flex flex-col items-center text-center">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-24 lg:grid-cols-[1.1fr_1fr]">
+        <div className="flex flex-col text-center lg:text-left">
           <Reveal>
-            <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl">
-              Grafikdesign
-              <br />
-              <span className="slogan-gradient">
-                aus Leidenschaft.
-              </span>
+            <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl">
+              Grafikdesign{" "}
+              <span className="slogan-gradient">aus Leidenschaft.</span>
             </h1>
           </Reveal>
 
@@ -89,7 +86,7 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={300}>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:max-w-none">
               Ich bin Lasse, 16 Jahre alt und beschäftige mich leidenschaftlich mit
               Grafikdesign. Bei Lasse.Design entstehen moderne und individuelle Designs –
               aktuell als Hobby und aus Spaß am Gestalten.
@@ -106,6 +103,22 @@ function Hero() {
             </a>
           </Reveal>
         </div>
+
+        <Reveal delay={300} className="mx-auto w-full max-w-md">
+          <figure className="flex flex-col gap-4">
+            <BeforeAfterSlider
+              beforeImage={sandwichBeforeAsset.url}
+              afterImage={sandwichAfterAsset.url}
+              beforeAlt="Vorher: dunkles Toastsandwiches-Plakat"
+              afterAlt="Nachher: modernes Toast-Sandwich-Plakat"
+              initialPosition={45}
+              className="border border-border"
+            />
+            <figcaption className="text-center font-display text-sm font-medium tracking-wide text-muted-foreground">
+              Sandwich – KI-Redesign
+            </figcaption>
+          </figure>
+        </Reveal>
       </div>
     </section>
   );
