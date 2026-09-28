@@ -74,7 +74,7 @@ function Hero() {
         <div className="flex flex-col text-center lg:text-left">
           <Reveal>
             <h1 className="font-display font-bold leading-[1.05] tracking-tight text-foreground">
-              <span className="block text-[2.9rem] sm:text-[3.6rem]">Grafikdesign</span>{" "}
+              <span className="-mt-0.5 block text-[2.9rem] sm:text-[3.6rem]">Grafikdesign</span>{" "}
               <span className="slogan-gradient -mt-1 block whitespace-nowrap text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.05]">
                 aus Leidenschaft.
               </span>
