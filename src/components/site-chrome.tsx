@@ -123,7 +123,7 @@ export function BackgroundAsset() {
         alt=""
         className="h-full w-full object-cover opacity-90 saturate-125"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/35 to-background/75" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/55 via-35% to-background/80" />
     </div>
   );
 }
