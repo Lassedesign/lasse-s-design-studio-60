@@ -1,10 +1,14 @@
 import { cn } from "@/lib/utils";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { Reveal } from "@/components/site-chrome";
-import sandwichBeforeAsset from "@/assets/sandwich-ki-before.png.asset.json";
-import sandwichAfterAsset from "@/assets/sandwich-ki-after.jpg.asset.json";
-import immobilienBeforeAsset from "@/assets/immobilien-ki-before.png.asset.json";
-import immobilienAfterAsset from "@/assets/immobilien-ki-after.png.asset.json";
+import sandwichBeforeAssetSrc from "@/assets/sandwich-ki-before.png";
+const sandwichBeforeAsset = { url: sandwichBeforeAssetSrc };
+import sandwichAfterAssetSrc from "@/assets/sandwich-ki-after.jpg";
+const sandwichAfterAsset = { url: sandwichAfterAssetSrc };
+import immobilienBeforeAssetSrc from "@/assets/immobilien-ki-before.png";
+const immobilienBeforeAsset = { url: immobilienBeforeAssetSrc };
+import immobilienAfterAssetSrc from "@/assets/immobilien-ki-after.png";
+const immobilienAfterAsset = { url: immobilienAfterAssetSrc };
 
 export const SLIDERS = [
   {

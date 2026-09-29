@@ -1,16 +1,27 @@
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/site-chrome";
-import foodstreetAsset from "@/assets/poster-foodstreet.jpg.asset.json";
-import flohmarktAsset from "@/assets/poster-flohmarkt.png.asset.json";
-import dbAsset from "@/assets/poster-db.png.asset.json";
-import barbershopAsset from "@/assets/poster-barbershop.jpg.asset.json";
-import diorAsset from "@/assets/poster-dior.png.asset.json";
-import iphoneAsset from "@/assets/poster-iphone.png.asset.json";
-import personalTrainerAsset from "@/assets/poster-personal-trainer.png.asset.json";
-import carportMadejAsset from "@/assets/poster-carport-madej.png.asset.json";
-import iphoneNaturallyAsset from "@/assets/poster-iphone-naturally.png.asset.json";
-import elektrofuchsAsset from "@/assets/poster-elektrofuchs.png.asset.json";
-import hackfleischspiessAsset from "@/assets/poster-hackfleischspiess.jpg.asset.json";
+import foodstreetAssetSrc from "@/assets/poster-foodstreet.jpg";
+const foodstreetAsset = { url: foodstreetAssetSrc };
+import flohmarktAssetSrc from "@/assets/poster-flohmarkt.png";
+const flohmarktAsset = { url: flohmarktAssetSrc };
+import dbAssetSrc from "@/assets/poster-db.png";
+const dbAsset = { url: dbAssetSrc };
+import barbershopAssetSrc from "@/assets/poster-barbershop.jpg";
+const barbershopAsset = { url: barbershopAssetSrc };
+import diorAssetSrc from "@/assets/poster-dior.png";
+const diorAsset = { url: diorAssetSrc };
+import iphoneAssetSrc from "@/assets/poster-iphone.png";
+const iphoneAsset = { url: iphoneAssetSrc };
+import personalTrainerAssetSrc from "@/assets/poster-personal-trainer.png";
+const personalTrainerAsset = { url: personalTrainerAssetSrc };
+import carportMadejAssetSrc from "@/assets/poster-carport-madej.png";
+const carportMadejAsset = { url: carportMadejAssetSrc };
+import iphoneNaturallyAssetSrc from "@/assets/poster-iphone-naturally.png";
+const iphoneNaturallyAsset = { url: iphoneNaturallyAssetSrc };
+import elektrofuchsAssetSrc from "@/assets/poster-elektrofuchs.png";
+const elektrofuchsAsset = { url: elektrofuchsAssetSrc };
+import hackfleischspiessAssetSrc from "@/assets/poster-hackfleischspiess.jpg";
+const hackfleischspiessAsset = { url: hackfleischspiessAssetSrc };
 
 export const GALLERY = [
   // Hoch (schmal) + niedrig (breit) abwechselnd, damit alle Spalten gleich hoch sind
