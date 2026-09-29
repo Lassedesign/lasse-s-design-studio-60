@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import backgroundAssetSrc from "@/assets/lasse-blue-background.jpeg";
 const backgroundAsset = { url: backgroundAssetSrc };
 
-export const INSTAGRAM_URL = "https://www.instagram.com/lasse.design";
+export const INSTAGRAM_URL = "https://www.instagram.com/lasse_design";
 export const EMAIL_ADDRESS = "lasse.design@gmx.de";
 
 export const SLOT_GRADS = [
