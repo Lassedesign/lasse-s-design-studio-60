@@ -10,14 +10,21 @@ import {
   ArrowDown,
   ArrowRight,
 } from "lucide-react";
-import dbMockup from "@/assets/poster-db-mockup.png.asset.json";
-import diorMockup from "@/assets/poster-dior-mockup.png.asset.json";
-import carportMockup from "@/assets/poster-carport-mockup2.jpg.asset.json";
+import dbMockupSrc from "@/assets/poster-db-mockup.png";
+const dbMockup = { url: dbMockupSrc };
+import diorMockupSrc from "@/assets/poster-dior-mockup.png";
+const diorMockup = { url: diorMockupSrc };
+import carportMockupSrc from "@/assets/poster-carport-mockup2.jpg";
+const carportMockup = { url: carportMockupSrc };
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
-import sandwichBeforeAsset from "@/assets/sandwich-ki-before.png.asset.json";
-import sandwichAfterAsset from "@/assets/sandwich-ki-after.jpg.asset.json";
-import immobilienBeforeAsset from "@/assets/immobilien-ki-before.png.asset.json";
-import immobilienAfterAsset from "@/assets/immobilien-ki-after.png.asset.json";
+import sandwichBeforeAssetSrc from "@/assets/sandwich-ki-before.png";
+const sandwichBeforeAsset = { url: sandwichBeforeAssetSrc };
+import sandwichAfterAssetSrc from "@/assets/sandwich-ki-after.jpg";
+const sandwichAfterAsset = { url: sandwichAfterAssetSrc };
+import immobilienBeforeAssetSrc from "@/assets/immobilien-ki-before.png";
+const immobilienBeforeAsset = { url: immobilienBeforeAssetSrc };
+import immobilienAfterAssetSrc from "@/assets/immobilien-ki-after.png";
+const immobilienAfterAsset = { url: immobilienAfterAssetSrc };
 import {
   BackgroundAsset,
   Footer,

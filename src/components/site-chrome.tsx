@@ -2,7 +2,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Instagram, Mail, Image as ImageIcon, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import backgroundAsset from "@/assets/lasse-blue-background.jpeg.asset.json";
+import backgroundAssetSrc from "@/assets/lasse-blue-background.jpeg";
+const backgroundAsset = { url: backgroundAssetSrc };
 
 export const INSTAGRAM_URL = "https://www.instagram.com/lasse.design";
 export const EMAIL_ADDRESS = "Lasse.Design@gmx.de";
