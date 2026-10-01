@@ -18,8 +18,6 @@ import carportMadejAssetSrc from "@/assets/poster-carport-madej.png";
 const carportMadejAsset = { url: carportMadejAssetSrc };
 import iphoneNaturallyAssetSrc from "@/assets/poster-iphone-naturally.png";
 const iphoneNaturallyAsset = { url: iphoneNaturallyAssetSrc };
-import elektrofuchsAssetSrc from "@/assets/poster-elektrofuchs.png";
-const elektrofuchsAsset = { url: elektrofuchsAssetSrc };
 import hackfleischspiessAssetSrc from "@/assets/poster-hackfleischspiess.jpg";
 const hackfleischspiessAsset = { url: hackfleischspiessAssetSrc };
 import bubensahneAssetSrc from "@/assets/poster-bubensahne.jpg";
@@ -62,10 +60,6 @@ export const GALLERY = [
   {
     src: iphoneNaturallyAsset.url,
     alt: "Werbeplakat: iPhone 17 Pro – Pro. Naturally.",
-  },
-  {
-    src: elektrofuchsAsset.url,
-    alt: "Plakat: Der Elektrofuchs – Wir suchen dich!",
   },
   {
     src: hackfleischspiessAsset.url,
