@@ -22,6 +22,8 @@ import elektrofuchsAssetSrc from "@/assets/poster-elektrofuchs.png";
 const elektrofuchsAsset = { url: elektrofuchsAssetSrc };
 import hackfleischspiessAssetSrc from "@/assets/poster-hackfleischspiess.jpg";
 const hackfleischspiessAsset = { url: hackfleischspiessAssetSrc };
+import bubensahneAssetSrc from "@/assets/poster-bubensahne.jpg";
+const bubensahneAsset = { url: bubensahneAssetSrc };
 
 export const GALLERY = [
   // Hoch (schmal) + niedrig (breit) abwechselnd, damit alle Spalten gleich hoch sind
@@ -68,6 +70,10 @@ export const GALLERY = [
   {
     src: hackfleischspiessAsset.url,
     alt: "Plakat: Georgische Hackfleischspieß – Jetzt probieren!",
+  },
+  {
+    src: bubensahneAsset.url,
+    alt: "Werbeplakat: Redo Bubensahne – Einfach direkt schlucken",
   },
 ];
 
