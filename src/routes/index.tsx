@@ -82,7 +82,7 @@ function Hero() {
           <Reveal>
             <h1 className="font-display font-bold leading-[1.05] tracking-tight text-foreground">
               <span className="-mt-0.5 block text-[2.9rem] sm:text-[3.6rem]">Grafikdesign</span>{" "}
-              <span className="slogan-gradient -mt-1 block whitespace-nowrap text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.05]">
+              <span className="slogan-gradient mt-0 block whitespace-nowrap text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.05] sm:-mt-1">
                 aus Leidenschaft.
               </span>
             </h1>
