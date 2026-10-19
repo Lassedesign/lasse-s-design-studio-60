@@ -409,9 +409,9 @@ function Index() {
       <main>
         <Hero />
         <SectionShade />
-        <Warum />
-        <SectionShade />
         <Portfolio />
+        <SectionShade />
+        <Warum />
         <SectionShade />
         <Leistungen />
         <SectionShade />
