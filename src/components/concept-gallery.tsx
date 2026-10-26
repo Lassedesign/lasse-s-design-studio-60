@@ -22,6 +22,12 @@ import hackfleischspiessAssetSrc from "@/assets/poster-hackfleischspiess.jpg";
 const hackfleischspiessAsset = { url: hackfleischspiessAssetSrc };
 import bubensahneAssetSrc from "@/assets/poster-bubensahne.jpg";
 const bubensahneAsset = { url: bubensahneAssetSrc };
+import baggerAssetSrc from "@/assets/poster-bagger.jpg";
+const baggerAsset = { url: baggerAssetSrc };
+import wrigleyAssetSrc from "@/assets/poster-wrigley.jpg";
+const wrigleyAsset = { url: wrigleyAssetSrc };
+import pastaAssetSrc from "@/assets/poster-pasta.jpg";
+const pastaAsset = { url: pastaAssetSrc };
 
 export const GALLERY = [
   // Hoch (schmal) + niedrig (breit) abwechselnd, damit alle Spalten gleich hoch sind
@@ -68,6 +74,18 @@ export const GALLERY = [
   {
     src: bubensahneAsset.url,
     alt: "Werbeplakat: Redo Bubensahne – Einfach direkt schlucken",
+  },
+  {
+    src: baggerAsset.url,
+    alt: "Plakat: Baggerfahrer gesucht – Abbruch & Tiefbau",
+  },
+  {
+    src: wrigleyAsset.url,
+    alt: "Werbeplakat: Wrigley's Extra – Stay Fresh",
+  },
+  {
+    src: pastaAsset.url,
+    alt: "Plakat: Pasta hausgemacht – ab 7,90 €",
   },
 ];
 
