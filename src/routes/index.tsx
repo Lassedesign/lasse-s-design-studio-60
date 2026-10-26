@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import dbMockupSrc from "@/assets/poster-db-mockup.png";
 const dbMockup = { url: dbMockupSrc };
-import extraMockupSrc from "@/assets/poster-wrigley.jpg";
+import extraMockupSrc from "@/assets/poster-wrigley-mockup.png";
 const extraMockup = { url: extraMockupSrc };
 import carportMockupSrc from "@/assets/poster-carport-mockup2.jpg";
 const carportMockup = { url: carportMockupSrc };
@@ -35,7 +35,7 @@ import {
 } from "@/components/site-chrome";
 
 const HOME_POSTERS = [
-  { src: extraMockup.url, alt: "Wrigley's Extra Stay Fresh – KI-Redesign (auf einem Werbetafel-Gestell)" },
+  { src: extraMockup.url, alt: "Wrigley's Extra Stay Fresh (Plakat im Metallrahmen an einer Wand)" },
   { src: dbMockup.url, alt: "DB – Wir suchen Sicherheitskräfte (Plakat in der Bahn)" },
   { src: carportMockup.url, alt: "Sommeraktion Stahl Carports 6x6 – KI-Redesign (auf einem Werbetafel-Gestell)" },
 ];
