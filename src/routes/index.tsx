@@ -12,8 +12,8 @@ import {
 } from "lucide-react";
 import dbMockupSrc from "@/assets/poster-db-mockup.png";
 const dbMockup = { url: dbMockupSrc };
-import diorMockupSrc from "@/assets/poster-dior-mockup.png";
-const diorMockup = { url: diorMockupSrc };
+import extraMockupSrc from "@/assets/poster-wrigley.jpg";
+const extraMockup = { url: extraMockupSrc };
 import carportMockupSrc from "@/assets/poster-carport-mockup2.jpg";
 const carportMockup = { url: carportMockupSrc };
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
@@ -35,9 +35,9 @@ import {
 } from "@/components/site-chrome";
 
 const HOME_POSTERS = [
-  { src: carportMockup.url, alt: "Sommeraktion Stahl Carports 6x6 – KI-Redesign (auf einem Werbetafel-Gestell)" },
+  { src: extraMockup.url, alt: "Wrigley's Extra Stay Fresh – KI-Redesign (auf einem Werbetafel-Gestell)" },
   { src: dbMockup.url, alt: "DB – Wir suchen Sicherheitskräfte (Plakat in der Bahn)" },
-  { src: diorMockup.url, alt: "Dior Sauvage Parfum (Plakat im Schaufenster)" },
+  { src: carportMockup.url, alt: "Sommeraktion Stahl Carports 6x6 – KI-Redesign (auf einem Werbetafel-Gestell)" },
 ];
 
 export const Route = createFileRoute("/")({
